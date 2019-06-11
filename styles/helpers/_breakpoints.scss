@@ -1,0 +1,17 @@
+// Extra large devices (large desktops, 1200px and up)
+$screen-xl-min: 1200px;
+
+// Large devices (desktops, 992px and up)
+$screen-lg-max: ($screen-xl-min - 1);
+$screen-lg-min: 992px;
+
+// Medium devices (tablets, 768px and up)
+$screen-md-max: ($screen-lg-min - 1);
+$screen-md-min: 768px;
+
+// Small devices (landscape phones, 544px and up)
+$screen-sm-max: ($screen-md-min - 1);
+$screen-sm-min: 544px;
+
+// Extra small devices (portrait phones, less than 544px)
+$screen-xs-max: ($screen-sm-min - 1);

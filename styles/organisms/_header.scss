@@ -1,0 +1,19 @@
+.o-site-header {
+  height: 80px;
+  box-shadow: none;
+  position: relative;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 700px) {
+      margin: 0 auto;
+    }
+  }
+}
+
+.site-logo {
+  display: block;
+  width: 78px;
+}

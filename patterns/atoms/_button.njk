@@ -1,0 +1,39 @@
+{#
+ * @atom Button
+ * @section haruharu/patterns/atoms/_button.njk
+ *
+ * @markup
+ *  {{ button ( text = 'Enviar' ) }}
+ *
+ * @properties
+ *  arrow --> string ( up / right / down / left )
+ *  autofocus --> boolean
+ *  class --> string
+ *  data --> object ( { data_key: value } )
+ *  disabled --> boolean
+ *  form --> string
+ *  formaction --> string
+ *  formenctype --> string
+ *  formmethod --> string
+ *  formnovalidate --> string
+ *  formtarget --> string
+ *  id --> string
+ *  inputmode --> string
+ *  list --> string
+ *  name --> string
+ *  placeholder --> string
+ *  readonly --> boolean
+ *  required --> boolean
+ *  state --> array ( primary*secondary / light*dark / small*medium*big )
+ *  style --> string
+ *  tabindex --> string
+ *  text --> string
+ *  type --> string
+ *  value --> string
+#}
+
+{% macro button (arrow = '', autofocus = false, class = '', data = {}, disabled = false, form = '', formaction = '', formenctype = '', formmethod = '', formnovalidate = '', formtarget = '', id = '', inputmode = '', list = '', name = '', placeholder = '', readonly = false, required = false, state = [], style = '', tabindex = '', text = '', type = '', value = '') %}
+
+  <button{{ ' autofocus' + autofocus if autofocus }} class="a-button{{ ' -has-icon icon-arrow-' + arrow if arrow}}{{ ' ' + class if class }}{% for value in state %} -{{ value }}{% endfor %}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}{{ ' disabled' + disabled if disabled }}{{ ' form="' + form + '"' if form }}{{ ' formaction="' + formaction + '"' if formaction }}{{ ' formenctype="' + formenctype + '"' if formenctype }}{{ ' formmethod="' + formmethod + '"' if formmethod }}{{ ' formnovalidate="' + formnovalidate + '"' if formnovalidate }}{{ ' formtarget="' + formtarget + '"' if formtarget }}{{ ' id="' + id + '"' if id }}{{ ' inputmode="' + inputmode + '"' if inputmode }}{{ ' list="' + list + '"' if list }}{{ ' name="' + name + '"' if name }}{{ ' placeholder="' + placeholder + '"' if placeholder }}{{ ' readonly' + readonly if readonly }}{{ ' required' + required if required }}{{ ' style="' + style + '"' if style }}{{ ' tabindex="' + tabindex + '"' if tabindex }}{{ ' type="' + type + '"' if type }}{{ ' value="' + value + '"' if value }}>{{ text }}</button>
+
+{% endmacro %}

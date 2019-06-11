@@ -1,0 +1,45 @@
+/**
+ * @atom Input
+ * @section haruharu/styles/atoms/_input.scss
+ *
+ * @modifiers
+ *  .-primary / .-secondary / .-emphasis
+ *  .-light / .-dark
+ *  .-small / .-medium / .-big
+ *
+ * @markup
+ *  <input type="text" value="Text" class="a-input -primary">
+ *
+ * @index
+ *  Input
+ *  Input Modifiers
+ *  Input States
+ */
+
+.a-input,
+input.a-input {
+  width: 100%;
+  height: 36px;
+  color: $charcoal;
+  line-height: 1;
+
+  /**
+  * Input Modifiers
+  */
+
+  /**
+  * Input States
+  */
+
+  :hover {
+
+  }
+
+  :active {
+
+  }
+
+  :focus {
+
+  }
+}

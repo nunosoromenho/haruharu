@@ -1,0 +1,94 @@
+.form {
+  padding: 24px 16px;
+
+  > p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: $charcoal;
+    line-height: 1.57;
+    text-align: center;
+  }
+
+  > h3 {
+    margin: 24px 16px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $charcoal;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .input-group {
+    width: 240px;
+    margin: 0 auto 16px;
+
+    &.-error {
+      input[type="text"],
+      input[type="email"] {
+        border-color: $nos-red;
+      }
+      .error-msg {
+        opacity: 1;
+      }
+    }
+  }
+
+  label {
+    display: block;
+    font-size: 12px;
+    color: $ash;
+    line-height: 1.67;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    background-color: $pure-white;
+    border: 1px solid $steel;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    line-height: 1.57;
+    -webkit-appearance: none;
+  }
+
+  .error-msg {
+    margin-top: 4px;
+    padding-left: 8px;
+    border-left: 1px solid $nos-red;
+    font-size: 12px;
+    color: $nos-red;
+    line-height: 1.67;
+    opacity: 0;
+  }
+
+  button {
+    display: block;
+    width: 240px;
+    height: 40px;
+    padding: 8px;
+    margin: 16px auto 24px;
+    background-color: $charcoal;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: $pure-white;
+    line-height: 1.57;
+    text-align: center;
+  }
+
+  a {
+    display: inline-block;
+    margin-left: 50%;
+    border-bottom: 1px solid $nos-light-green;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+    line-height: 1.57;
+    text-decoration: none;
+    transform: translateX(-50%);
+  }
+}

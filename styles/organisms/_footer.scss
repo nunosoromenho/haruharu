@@ -1,0 +1,35 @@
+.o-site-footer {
+  margin: 32px 0 0;
+  padding: 24px 0;
+  background-color: $bone;
+  font-size: 12px;
+  color: $ash;
+  line-height: 1.67;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+
+  > ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+
+    li {
+      font-size: 12px;
+      font-weight: 500;
+      color: $shadow;
+
+      ul {
+        margin-top: 16px;
+        padding: 0;
+        list-style: none;
+      }
+
+      li {
+        font-weight: normal;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{#
+ * @atom Input
+ * @section haruharu/patterns/atoms/_input.njk
+ *
+ * @markup
+ *  {{ button ( text = 'Enviar' ) }}
+ *
+ * @properties
+ *  autocomplete: string — on | off
+ *  autofocus: boolean
+ *  class: string
+ *  data: object — { data_key: value }
+ *  disabled: boolean
+ *  form: string
+ *  id: string
+ *  inputmode: string
+ *  list: string
+ *  name: string
+ *  placeholder: string
+ *  readonly: boolean
+ *  required: boolean
+ *  style: string
+ *  tabindex: string
+ *  type: string
+ *  value: string
+#}
+
+{% macro input (autocomplete = '', autofocus = false, class = '', data = {}, disabled = false, form = '', id = '', inputmode = '', list = '', name = '', placeholder = '', readonly = false, required = false, style = '', tabindex = '', type = '', value = '') %}
+
+  <input{{ ' autocomplete="' + autocomplete + '"' if autocomplete }}{{ ' autofocus' + autofocus if autofocus }} class="a-input{{ ' ' + class if class }}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}{{ ' disabled' + disabled if disabled }}{{ ' form="' + form + '"' if form }}{{ ' id="' + id + '"' if id }}{{ ' inputmode="' + inputmode + '"' if inputmode }}{{ ' list="' + list + '"' if list }}{{ ' name="' + name + '"' if name }}{{ ' placeholder="' + placeholder + '"' if placeholder }}{{ ' readonly' + readonly if readonly }}{{ ' required' + required if required }}{{ ' style="' + style + '"' if style }}{{ ' tabindex="' + tabindex + '"' if tabindex }}{{ ' type="' + type + '"' if type }}{{ ' value="' + value + '"' if value }}>
+
+{% endmacro %}

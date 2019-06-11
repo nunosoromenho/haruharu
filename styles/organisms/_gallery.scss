@@ -1,0 +1,228 @@
+.gallery {
+
+  > .slide {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 960px) {
+      height: 340px;
+    }
+
+    @media (max-width: 768px) {
+      height: 450px;
+    }
+
+    > .info {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      width: 960px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+
+      @media (max-width: 960px) {
+        width: 700px;
+      }
+
+      @media (max-width: 768px) {
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        padding: 16px 24px 48px;
+        background-color: rgba(0, 0, 0, .5);
+        top: auto;
+        bottom: 0;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 30px;
+          border-left: 0px solid transparent;
+          border-right: 100vw solid transparent;
+          border-bottom: 30px solid rgba(0, 0, 0, .5);
+          position: absolute;
+          top: -30px;
+          left: 0;
+        }
+      }
+
+      > * {
+        max-width: 470px;
+
+        @media (max-width: 768px) {
+          max-width: 100%;
+        }
+      }
+
+      > h2 {
+        margin-bottom: 16px;
+        font-size: 50px;
+        line-height: 1;
+
+        @media (max-width: 768px) {
+          width: 310px;
+          font-size: 28px;
+          line-height: 1.1;
+        }
+      }
+
+      > .text {
+        font-size: 22px;
+        line-height: 1.2;
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 1.38;
+        }
+      }
+
+      > .button {
+        margin-top: 16px;
+      }
+    }
+
+    > .image {
+      display: block;
+      width: 1360px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @media (max-width: 1360px) {
+        width: 960px;
+      }
+
+      @media (max-width: 960px) {
+        height: 340px;
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        height: 450px;
+      }
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &.-bg-blue { background-color: $nos-blue; }
+    &.-bg-light-blue { background-color: $nos-light-blue; }
+    &.-bg-dark-blue { background-color: $nos-dark-blue; }
+    &.-bg-green { background-color: $nos-green; }
+    &.-bg-light-green { background-color: $nos-light-green; }
+    &.-bg-pink { background-color: $nos-pink; }
+    &.-bg-yellow { background-color: $nos-yellow; }
+    &.-bg-red { background-color: $nos-red; }
+    &.-bg-black { background-color: $pure-black; }
+
+  }
+
+}
+
+.tns-outer {
+  position: relative;
+
+  > button[data-action] {
+    display: none;
+  }
+
+  &:hover button.tns-nav-active::after {
+    animation-play-state: paused;
+  }
+}
+
+.tns-controls {
+  display: none;
+}
+
+.tns-nav {
+  width: 960px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: 960px) {
+    width: 700px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  button {
+    width: calc(100% / 12);
+    height: 36px;
+    margin-right: 16px;
+    padding: 16px 0;
+    background: none;
+    border: none;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      width: calc(100% / 6);
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      padding: 0;
+      background: rgba(255, 255, 255, .4);
+      border: none;
+      position: absolute;
+      top: 16px;
+      left: 0;
+      z-index: 0;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      padding: 0;
+      background: #FFF;
+      border: none;
+      transform: translateX(-100%);
+      position: absolute;
+      top: 16px;
+      left: 0;
+      z-index: 1;
+    }
+
+    &.tns-nav-active::after {
+      animation: 5s ease-out 0s 1 forwards loadButtonAnim;
+    }
+
+    @keyframes loadButtonAnim {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

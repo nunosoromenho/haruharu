@@ -1,0 +1,12 @@
+{% macro accordion (title = '') %}
+  <div class="accordion">
+    <div class="title">
+      {{ title }}
+    </div>
+    <div class="content">
+      {% block accordioncontent %}
+        teste
+      {% endblock %}
+    </div>
+  </div>
+{% endmacro %}

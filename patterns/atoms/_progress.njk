@@ -1,0 +1,10 @@
+{% macro progress (value = '', max = '') %}
+  <div class="a-progress">
+    <progress max="{{ max }}" value="{{ value }}">
+      <div class="progress-fallback">
+        <span style="width: {{ 100 / max * value }}%;">Progresso: {{ 100 / max * value }}%</span>
+      </div>
+    </progress>
+    <label><span>{{ value }}</span>/{{ max }} Respondidas</label>
+  </div>
+{% endmacro %}

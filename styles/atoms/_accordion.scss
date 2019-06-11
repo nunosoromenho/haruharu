@@ -1,0 +1,14 @@
+.accordion {
+  > .title {
+    padding: 16px;
+    background-color: #f2f2f2;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 2.21;
+    color: $charcoal;
+  }
+
+  > .content {
+    padding: 16px;
+  }
+}

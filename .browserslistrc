@@ -1,0 +1,6 @@
+# https://github.com/browserslist/browserslist#readme
+
+last 3 major version
+not dead
+Edge >= 14
+Explorer >= 8

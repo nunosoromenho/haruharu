@@ -1,0 +1,40 @@
+.blocks {
+
+  &.-cols {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 32px;
+    clear: both;
+
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+}
+
+.block-text {
+  max-width: 400px;
+  margin: 0 auto;
+
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: $charcoal;
+    text-align: center;
+  }
+  .text {
+    font-size: 14px;
+    line-height: 1.57;
+    color: $ash;
+    text-align: center;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+
+    & + p {
+      margin-top: 16px;
+    }
+  }
+}

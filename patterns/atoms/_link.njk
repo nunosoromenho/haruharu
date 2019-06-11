@@ -1,0 +1,8 @@
+{% macro link ( text = '', url = false, arrow = false, customClasses = '' ) %}
+  <a class="link{{ ' ' + customClasses if customClasses }}{{ ' -has-arrow' if arrow }}" href="{{ url }}" role="link">
+    <span class="title">{{ text }}</span>
+    {% if arrow %}
+      <span class="arrow icon-arrow-right"></span>
+    {% endif %}
+  </a>
+{% endmacro %}

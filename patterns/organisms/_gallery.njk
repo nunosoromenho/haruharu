@@ -1,0 +1,29 @@
+{% from '../atoms/_image.njk' import image %}
+{% from '../atoms/_button.njk' import button %}
+
+{% macro gallery(slides=[], moreClasses='') %}
+  <div class="gallery{{ ' ' + moreClasses if moreClasses }}">
+
+    {% for slide in slides %}
+      <div class="slide{{ ' -bg-' + slide.background if slide.background }}">
+        <div class="info html{{ ' ' + slide.position if slide.position }}">
+          {% if slide.title %}
+            <h2{{ ' style="color: ' + slide.titlecolor + '"' if slide.titlecolor }}>{{ slide.title }}</h2>
+          {% endif %}
+          {% if slide.text %}
+            <div class="text"{{ ' style="color: ' + slide.textcolor + '"' if slide.textcolor }}>
+              {{ slide.text }}
+            </div>
+          {% endif %}
+          {% if slide.button %}
+            {{ button (slide.button.text, slide.button.url, false, slide.button.classes) }}
+          {% endif %}
+        </div>
+        {{ image (slide.image.sources, slide.image.default, slide.image.noscript, slide.image.alt) }}
+      </div>
+    {% else %}
+      <p>Não existem slides.</p>
+    {% endfor %}
+
+  </div>
+{% endmacro %}

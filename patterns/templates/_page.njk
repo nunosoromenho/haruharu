@@ -1,0 +1,21 @@
+{% extends '../organisms/html.njk' %}
+
+{% block body %}
+  <body{{ ' class="' + bodyClasses + '"' if bodyClasses}}>
+    {% include '../organisms/header.njk' %}
+
+    <div class="o-site-main -contain">
+      {% block main %}
+        <h1>This is a post!</h1>
+      {% endblock %}
+    </div>
+
+    {% include '../organisms/footer.njk' %}
+
+
+    {% block jsPlugins %}{% endblock %}
+    {% block js %}
+      <script src="assets/js/main.js"></script>
+    {% endblock %}
+  </body>
+{% endblock %}

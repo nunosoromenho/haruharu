@@ -1,0 +1,24 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{% if project.title %} {{ project.title }} {% else %} {{ pageTitle }} {% endif %}{% if project.subtitle %}  — {{ project.subtitle }}{% endif %}</title>
+
+  <link rel="shortcut icon" href="//cdn.nos.pt/common/favicon_144.png">
+
+  <link rel="stylesheet" href="http://cdn.nos.pt/common/appsv4/style.css">
+
+  {% block pluginCSS %}
+  {% endblock %}
+
+  {% block mainCSS %}
+    <link rel="stylesheet" href="https://www.nos.pt/_layouts/15/Armstrong/css/print.min.css" media="print" type="text/css">
+    <link rel="stylesheet" href="https://www.nos.pt/_layouts/15/Armstrong/css/screen.min.css?v=15" media="screen,projection" type="text/css">
+    {% if index%}
+      <link rel="stylesheet" href="assets/css/index.css">
+    {% else %}
+      <link rel="stylesheet" href="assets/css/main.css">
+    {% endif %}
+  {% endblock %}
+
+</head>

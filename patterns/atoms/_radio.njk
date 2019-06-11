@@ -1,0 +1,13 @@
+{% macro radio (value = '', subtitle = '', name = '', target = '') %}
+  <div class="radio-group">
+    <input type="radio" name="{{ name }}" id="{{ value | urlencode }}" value="{{ value }}" data-target="{{ target }}">
+    <label for="{{ value | urlencode }}">
+      <span>
+        {{ value }}
+        {% if subtitle %}
+          <span class="subtitle">{{ subtitle }}</span>
+        {% endif %}
+      </span>
+      <i class="icon-check"></i></label>
+  </div>
+{% endmacro %}

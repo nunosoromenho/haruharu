@@ -1,0 +1,13 @@
+{% from '../atoms/_input.njk' import input %}
+
+{% macro autocomplete (inputName = '', inputId = '', inputPlaceholder = '', list = [], listName = '') %}
+  <div class="m-autocomplete">
+    {{ input (type = 'text', name = inputName, id = inputId, placeholder = inputPlaceholder, data = { 'autocomplete-target': listName }, autocomplete = 'off', class = 'a-autocomplete-input' ) }}
+
+    <ul class="a-autocomplete-list" data-autocomplete-list="{{ listName }}">
+      {% for item in list %}
+        <li>{{ item.title }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endmacro %}

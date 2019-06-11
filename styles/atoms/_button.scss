@@ -1,0 +1,142 @@
+/**
+ * @atom Button
+ * @section haruharu/styles/atoms/_button.scss
+ *
+ * @modifiers
+ *  .-primary / .-secondary
+ *  .-light / .-dark
+ *  .-small / .-medium / .-big
+ *  .-has-icon
+ *
+ * @markup
+ *  <button class="a-button -primary">Click me</button>
+ *  <button class="a-button">Click me</button>
+ *  <a href="#" class="a-button -primary">Click Me</a>
+ *
+ * @index
+ *  Button
+ *  Button Modifiers
+ *  Button States
+ */
+
+.a-button,
+a.a-button,
+button.a-button {
+  display: inline-flex;
+
+  padding: 0 16px;
+
+  border: 1px solid $charcoal;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1;
+
+  position: relative;
+  clear: both;
+
+  @media (max-width: 700px) {
+    margin: 0 32px;
+    text-align: center;
+  }
+
+  /**
+  * Button Modifiers
+  */
+
+  &.-small {
+    height: 32px;
+
+    @media (max-width: 700px) {
+      height: 40px;
+    }
+  }
+
+  &.-medium {
+    height: 36px;
+
+    @media (max-width: 700px) {
+      height: 40px;
+    }
+  }
+
+  &.-big {
+    height: 40px;
+  }
+
+  &.-primary {
+    background-color: $charcoal;
+    border-color: $charcoal;
+    color: $pure-white;
+
+    &.-light {
+      background-color: $charcoal;
+      border-color: $charcoal;
+      color: $pure-white;
+    }
+
+    &.-dark {
+      background-color: $pure-white;
+      border-color: $pure-white;
+      color: $charcoal;
+    }
+  }
+
+  &.-secondary {
+    background-color: $pure-white;
+    border-color: $charcoal;
+    color: $charcoal;
+
+    &.-light {
+      background-color: $pure-white;
+      border-color: $charcoal;
+      color: $charcoal;
+    }
+
+    &.-dark {
+      background-color: $pure-white;
+      border-color: $pure-white;
+      color: $charcoal;
+    }
+  }
+
+  &.-has-icon {
+
+    &.icon-arrow-top {
+
+    }
+
+    &.icon-arrow-right {
+
+    }
+
+    &.icon-arrow-down {
+
+    }
+
+    &.icon-arrow-left {
+
+    }
+  }
+
+  /**
+  * Button States
+  */
+
+  &:active {
+    outline: 0;
+    transform: translate(1px);
+  }
+
+  &:hover {
+    .a-text {
+      transform: translateX(-5px);
+    }
+    .a-icon {
+      opacity: 1;
+      transform: translateX(-5px) translateY(-50%);
+    }
+  }
+}
