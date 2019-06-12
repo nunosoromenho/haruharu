@@ -4,7 +4,6 @@
   "description": "Design System",
   "author": "Nuno Sequeira",
   "license": "UNLICENSED",
-  "private": true,
   "engines": {
     "node": "^12.4.0",
     "npm": "^6.9.0"

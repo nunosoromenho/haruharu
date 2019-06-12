@@ -1,13 +1,31 @@
-{% extends '../organisms/html.njk' %}
+<!doctype html>
+<html lang="{{ project.lang if project.lang else 'pt' }}" class="{{ ['theme_green', 'theme_lightGreen', 'theme_blue', 'theme_yellow', 'theme_pink'] | random }}{{ ' ' + project.htmlclasses if project.htmlclasses }}">
+  <head>
+    <meta charset="{{ project.charset if project.charset else 'utf-8' }">
+    <meta name="viewport" content="{{ project.viewport if project.viewport else 'width=device-width, initial-scale=1' }}">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% project.title if project.title else pageTitle %}{% ' -' + project.subtitle if project.subtitle %} </title>
 
-{% block body %}
+    <link rel="shortcut icon" href="//cdn.nos.pt/common/favicon_144.png">
+
+    {% block fontIcon %}
+      <link rel="stylesheet" href="https://cdn.nos.pt/common/fontsv6/fontcustom.css">
+    {% endif %}
+
+    {% block cssPlugins %}{% endblock %}
+
+    {% block cssMain %}
+      <link rel="stylesheet" href="https://www.nos.pt/_layouts/15/Armstrong/css/print.min.css" media="print" type="text/css">
+      <link rel="stylesheet" href="https://www.nos.pt/_layouts/15/Armstrong/css/screen.min.css?v=15" media="screen,projection" type="text/css">
+      <link rel="stylesheet" href="assets/css/index.css">
+    {% endblock %}
+
+  </head>
   <body class="index">
 
     <div class="main">
-      {% block main %}
-        <h1>This is a post!</h1>
-      {% endblock %}
+      {% block main %}{% endblock %}
     </div>
 
   </body>
-{% endblock %}
+</html>
