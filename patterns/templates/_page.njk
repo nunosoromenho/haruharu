@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ project.lang if project.lang else 'pt' }}" class="{{ ['theme_green', 'theme_lightGreen', 'theme_blue', 'theme_yellow', 'theme_pink'] | random }}{{ ' ' + project.htmlclasses if project.htmlclasses }}">
   <head>
-    <meta charset="{{ project.charset if project.charset else 'utf-8' }">
+    <meta charset="{{ project.charset if project.charset else 'utf-8' }}">
     <meta name="viewport" content="{{ project.viewport if project.viewport else 'width=device-width, initial-scale=1' }}">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{% project.title if project.title else pageTitle %}{% ' -' + project.subtitle if project.subtitle %} </title>
