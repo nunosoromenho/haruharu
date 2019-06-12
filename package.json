@@ -1,7 +1,8 @@
 {
   "name": "haruharu",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.2",
   "description": "Design System",
+  "repository": "github:nunosoromenho/haruharu",
   "author": "Nuno Sequeira",
   "license": "UNLICENSED",
   "engines": {
