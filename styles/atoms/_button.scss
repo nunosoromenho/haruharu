@@ -1,4 +1,4 @@
-/**
+ /**
  * @atom Button
  * @section haruharu/styles/atoms/_button.scss
  *
@@ -27,7 +27,6 @@ button.a-button {
   padding: 0 16px;
 
   border: 1px solid $charcoal;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
 
   font-size: 14px;
   font-weight: 500;
@@ -69,6 +68,7 @@ button.a-button {
   &.-primary {
     background-color: $charcoal;
     border-color: $charcoal;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
     color: $pure-white;
 
     &.-light {
@@ -103,21 +103,56 @@ button.a-button {
   }
 
   &.-has-icon {
+    transition: padding .4s;
+    position: relative;
+
+    &::before {
+      content: '';
+      font-family: 'fontcustom';
+      transition: opacity .4s;
+      position: absolute;
+      opacity: 0;
+    }
 
     &.icon-arrow-top {
-
+      &::before {
+        content: '\fb72';
+      }
     }
 
     &.icon-arrow-right {
-
+      &::before {
+        content: '\fb71';
+        right: 2px;
+      }
     }
 
     &.icon-arrow-down {
-
+      &::before {
+        content: '\fb6f';
+      }
     }
 
     &.icon-arrow-left {
+      &::before {
+        content: '\fb70';
+        left: 2px;
+      }
+    }
 
+    &:hover {
+
+      &::before {
+        opacity: 1;
+      }
+
+      &.icon-arrow-right {
+        padding: 0 20px 0 12px;
+      }
+
+      &.icon-arrow-left {
+        padding: 0 12px 0 20px;
+      }
     }
   }
 
