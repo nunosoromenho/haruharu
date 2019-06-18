@@ -1,0 +1,32 @@
+{#
+ * @atom Button Link
+ * @section haruharu/patterns/atoms/_button_link.njk
+ *
+ * @markup
+ *  {{ button_link ( text = 'Enviar' ) }}
+ *
+ * @properties
+ *  arrow --> string ( up / right / down / left )
+ *  class --> string
+ *  data --> object { key: value }
+ *  download --> string
+ *  dir --> string ( ltr / rtl / auto )
+ *  disabled --> boolean
+ *  href --> string
+ *  hreflang --> string
+ *  id --> string
+ *  rel --> string
+ *  state --> array ( primary*secondary / light*dark / small*medium*big )
+ *  style --> string
+ *  tabindex --> string
+ *  target --> string
+ *  text --> string
+ *  title --> string
+ *  type --> string
+#}
+
+{% macro button_link (arrow = '', class = '', data = {}, disabled = false, href = '', hreflang = '', id = '', rel = '', state = [], style = '', tabindex = '', target = '', text = '', title = '', type = '') %}
+
+  <a class="a-button{{ ' -has-icon icon-arrow-' + arrow if arrow}}{{ ' ' + class if class }}{% for value in state %} -{{ value }}{% endfor %}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}{{ ' download="' + download + '"' if download }}{{ ' dir="' + fodirrm + '"' if dir }}{{ ' href="' + href + '"' if href }}{{ ' hreflang="' + hreflang + '"' if hreflang }}{{ ' id="' + id + '"' if id }}{{ ' rel="' + rel + '"' if rel }}{{ ' style="' + style + '"' if style }}{{ ' tabindex="' + tabindex + '"' if tabindex }}{{ ' target="' + target + '"' if target }}{{ ' title="' + title + '"' if title }}{{ ' type="' + type + '"' if type }}>{{ text }}</a>
+
+{% endmacro %}

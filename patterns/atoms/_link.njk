@@ -1,8 +1,29 @@
-{% macro link ( text = '', url = false, arrow = false, customClasses = '' ) %}
-  <a class="link{{ ' ' + customClasses if customClasses }}{{ ' -has-arrow' if arrow }}" href="{{ url }}" role="link">
-    <span class="title">{{ text }}</span>
-    {% if arrow %}
-      <span class="arrow icon-arrow-right"></span>
-    {% endif %}
-  </a>
+{#
+ * @atom Link
+ * @section haruharu/patterns/atoms/_link.njk
+ *
+ * @markup
+ *  {{ link ( href = 'https://www.nos.pt', text = 'Ver mais' ) }}
+ *
+ * @properties
+ *  class --> string
+ *  data --> object { key: value }
+ *  download --> string
+ *  href --> string
+ *  hreflang --> string
+ *  id --> string
+ *  rel --> string
+ *  state --> array ( primary*secondary / light*dark / small*medium*big )
+ *  style --> string
+ *  tabindex --> string
+ *  target --> string
+ *  text --> string
+ *  title --> string
+ *  type --> string
+#}
+
+{% macro link (class = '', data = {}, href = '', hreflang = '', id = '', rel = '', state = [], style = '', tabindex = '', target = '', text = '', title = '', type = '') %}
+
+  <a class="a-link{{ ' ' + class if class }}{% for value in state %} -{{ value }}{% endfor %}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}{{ ' download="' + download + '"' if download }}{{ ' href="' + href + '"' if href }}{{ ' hreflang="' + hreflang + '"' if hreflang }}{{ ' id="' + id + '"' if id }}{{ ' rel="' + rel + '"' if rel }}{{ ' style="' + style + '"' if style }}{{ ' tabindex="' + tabindex + '"' if tabindex }}{{ ' target="' + target + '"' if target }}{{ ' title="' + title + '"' if title }}{{ ' type="' + type + '"' if type }}>{{ text }}</a>
+
 {% endmacro %}

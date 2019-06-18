@@ -1,0 +1,33 @@
+{#
+ * @atom picture
+ * @section haruharu/patterns/atoms/_picture.njk
+ *
+ * @markup
+ *  {{ picture ( text = 'Enviar' ) }}
+ *
+ * @properties
+ *  alt --> string
+ *  class --> string
+ *  data --> object { key: value }
+ *  id --> string
+ *  sources --> array of objects [ { media: "", srcset: "", sizes: "" }, ... ]
+ *  src --> string ( url of default image )
+ *  state --> array ( primary*secondary / light*dark / small*medium*big )
+ *  style --> string
+ *  tabindex --> string
+ *  title --> string
+#}
+
+{% macro picture(alt = '', class = '', data = {}, id = '', sources = [], src = '', srcNS = '', srcsetNS = '', state = [], style = '', tabindex = '', title = '') %}
+  <picture class="a-picture{{ ' ' + class if class }}{% for value in state %} -{{ value }}{% endfor %}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}{{ ' id="' + id + '"' if id }}{{ ' style="' + style + '"' if style }}{{ ' tabindex="' + tabindex + '"' if tabindex }}>
+    {% for source in sources %}
+      <source{{ ' srcset="' + source.srcset + '"' if source.srcset }}{{ ' media="' + source.media + '"' if source.media }}{{ ' sizes="' + source.sizes + '"' if source.sizes }}>
+    {% endfor %}
+    {% if srcNS %}
+      <noscript>
+        <img{{ ' alt="' + alt + '"' if alt }}{{ ' srcNS="' + srcNS + '"' if srcNS }}{{ ' srcsetNS="' + srcsetNS + '"' if srcsetNS }}{{ ' title="' + title + '"' if title }}>
+      </noscript>
+    {% endif %}
+    <img{{ ' alt="' + alt + '"' if alt }}{{ ' src="' + src + '"' if src }}{{ ' srcset="' + srcset + '"' if srcset }}{{ ' title="' + title + '"' if title }}>
+  </picture>
+{% endmacro %}

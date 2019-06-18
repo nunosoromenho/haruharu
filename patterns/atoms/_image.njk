@@ -1,11 +1,11 @@
 {% macro image(sources=[], defaultImg='', noscriptImg='', alt='', moreClasses='') %}
-<picture class="image{{ ' ' + moreClasses if moreClasses }}">
-  {% for source in sources %}
-    <source media="{{ source.media }}" srcset="{{ source.url }}">
-  {% endfor %}
-  {# <noscript>
-    <img src="{{ noscriptImg }}" alt="{{ alt }}">
-  </noscript> #}
-  <img src="{{ defaultImg }}" alt="{{ alt }}">
-</picture>
+  <picture class="image{{ ' ' + moreClasses if moreClasses }}">
+    {% for source in sources %}
+      <source media="{{ source.media }}" srcset="{{ source.url }}">
+    {% endfor %}
+    <noscript>
+      <img src="{{ noscriptImg }}" alt="{{ alt }}">
+    </noscript>
+    <img src="{{ defaultImg }}" alt="{{ alt }}">
+  </picture>
 {% endmacro %}

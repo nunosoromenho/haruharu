@@ -10,8 +10,8 @@ $nos-site-width: 960px;
   }
 
   @media (max-width: 700px) {
-    padding-right: 16px!important;
-    padding-left: 16px!important;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 }
 
@@ -25,7 +25,7 @@ $nos-site-width: 960px;
 
   @media (max-width: 700px) {
     margin-left: -16px!important;
-    padding: 0!important;
+    padding: 0;
   }
 }
 
