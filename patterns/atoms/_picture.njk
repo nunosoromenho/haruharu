@@ -11,14 +11,17 @@
  *  data --> object { key: value }
  *  id --> string
  *  sources --> array of objects [ { media: "", srcset: "", sizes: "" }, ... ]
- *  src --> string ( url of default image )
+ *  src --> string ( default image )
+ *  srcNS --> string ( noscript image )
+ *  srcset --> string ( default image )
+ *  srcsetNS --> string ( noscript image )
  *  state --> array ( primary*secondary / light*dark / small*medium*big )
  *  style --> string
  *  tabindex --> string
  *  title --> string
 #}
 
-{% macro picture(alt = '', class = '', data = {}, id = '', sources = [], src = '', srcNS = '', srcsetNS = '', state = [], style = '', tabindex = '', title = '') %}
+{% macro picture(alt = '', class = '', data = {}, id = '', sources = [], src = '', srcNS = '', srcset = '', srcsetNS = '', state = [], style = '', tabindex = '', title = '') %}
   <picture class="a-picture{{ ' ' + class if class }}{% for value in state %} -{{ value }}{% endfor %}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}{{ ' id="' + id + '"' if id }}{{ ' style="' + style + '"' if style }}{{ ' tabindex="' + tabindex + '"' if tabindex }}>
     {% for source in sources %}
       <source{{ ' srcset="' + source.srcset + '"' if source.srcset }}{{ ' media="' + source.media + '"' if source.media }}{{ ' sizes="' + source.sizes + '"' if source.sizes }}>

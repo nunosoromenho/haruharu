@@ -47,58 +47,63 @@ button.a-button {
 
   &.-small {
     height: 32px;
+    line-height: 32px;
 
     @media (max-width: 700px) {
       height: 40px;
+      line-height: 40px;
     }
   }
 
   &.-medium {
     height: 36px;
+    line-height: 36px;
 
     @media (max-width: 700px) {
       height: 40px;
+      line-height: 40px;
     }
   }
 
   &.-big {
     height: 40px;
+    line-height: 40px;
   }
 
   &.-primary {
     background-color: $charcoal;
     border-color: $charcoal;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
-    color: $pure-white;
+    color: $white;
 
     &.-light {
       background-color: $charcoal;
       border-color: $charcoal;
-      color: $pure-white;
+      color: $white;
     }
 
     &.-dark {
-      background-color: $pure-white;
-      border-color: $pure-white;
+      background-color: $white;
+      border-color: $white;
       color: $charcoal;
     }
   }
 
   &.-secondary {
-    background-color: $pure-white;
+    background-color: transparent;
     border-color: $charcoal;
     color: $charcoal;
 
     &.-light {
-      background-color: $pure-white;
+      background-color: transparent;
       border-color: $charcoal;
       color: $charcoal;
     }
 
     &.-dark {
-      background-color: $pure-white;
-      border-color: $pure-white;
-      color: $charcoal;
+      background-color: transparent;
+      border-color: $white;
+      color: $white;
     }
   }
 
