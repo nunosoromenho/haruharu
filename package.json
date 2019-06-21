@@ -1,6 +1,6 @@
 {
   "name": "haruharu",
-  "version": "1.0.0-alpha.13",
+  "version": "1.0.0-alpha.15",
   "description": "Design System",
   "repository": "github:nunosoromenho/haruharu",
   "author": "Nuno Sequeira",
@@ -31,7 +31,6 @@
     "watch:html": "onchange \"test/_patterns\" -- run-s build:html",
     "watch": "run-p build:* serve watch:*",
     "w": "run-p build:* serve watch:*",
-    "postinstall": "run-s clean build watch",
     "compress": "tar -czvf site.tar.gz _site/",
     "dist": "run-s build compress"
   },
