@@ -1,0 +1,39 @@
+{% from 'haruharu/patterns/atoms/_picture.njk' import picture %}
+{% from 'haruharu/patterns/atoms/_button_link.njk' import button_link %}
+
+{% macro banner(slides = [], moreClasses = '') %}
+  <div class="o-banner-gallery{{ ' ' + moreClasses if moreClasses }}">
+
+    {% for slide in slides %}
+      <div class="m-slide{{ ' -bg-' + slide.background if slide.background }}">
+
+        <div class="m-slide-info m-html{{ ' -' + slide.position if slide.position }}">
+
+          {% if slide.pretitle %}
+            <h3{{ ' style="color: ' + slide.pretitlecolor + '"' if slide.pretitlecolor }}>{{ slide.pretitle }}</h3>
+          {% endif %}
+
+          {% if slide.title %}
+            <h2{{ ' class="' + slide.titlecolor + '"' if slide.titlecolor }}>{{ slide.title }}</h2>
+          {% endif %}
+
+          {% if slide.text %}
+            <div class="text"{{ ' style="color: ' + slide.textcolor + '"' if slide.textcolor }}>
+              {{ slide.text }}
+            </div>
+          {% endif %}
+
+          {% if slide.button %}
+            {{ button_link (arrow = 'right', text = slide.button.text, href = slide.button.url, state = slide.button.state) }}
+          {% endif %}
+        </div>
+
+        {{ picture (sources = slide.image.sources, src = slide.image.default, srcNS = slide.image.noscript, alt = slide.image.alt) }}
+
+      </div>
+    {% else %}
+      <p>Não existem slides.</p>
+    {% endfor %}
+
+  </div>
+{% endmacro %}

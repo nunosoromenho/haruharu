@@ -1,0 +1,61 @@
+{#
+ * @organism Banner Gallery
+ * @section haruharu/patterns/organisms/_banner_gallery.njk
+ *
+ * @markup
+ *  {{ banner ( slides = slides ) }}
+ *
+ * @properties
+ *  class --> string
+ *  data --> object { key: value }
+ *  id --> string
+ *  options --> object
+ *  slides --> array of objects [ {"title": "", "text": "", "position": "",
+ *             "button": { "text": "", "url": "", "state": [] }, "background": "",
+ *             "titlecolor": "", "textcolor": "", "image": { "alt": "", "default": "",
+ *             "noscript" = "", "sources" = [ { "media": "", "url": "" } ] } }, ... ]
+ *  style --> string
+ *  tabindex --> string
+#}
+
+{% from '../atoms/_picture.njk' import picture %}
+{% from '../atoms/_button_link.njk' import button_link %}
+
+{% macro banner_gallery (class = '', data = {}, id = '', styles = '', slides = [], tabindex = '', options = {}) %}
+
+  <div class="o-banner-gallery{{ ' ' + class if class }}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}{{ ' id="' + id + '"' if id }}{{ ' styles="' + styles + '"' if styles }}{{ ' tabindex="' + tabindex + '"' if tabindex }}>
+
+    {% for slide in slides %}
+      <div class="m-slide{{ ' -bg-' + slide.background if slide.background }}">
+
+        <div class="m-slide-info m-editable-html{{ ' -' + slide.position if slide.position }}">
+
+          {% if slide.pretitle %}
+            <h3 class="a-heading{{ ' -color-' + slide.titlpretitleecolor if slide.pretitle }}">{{ slide.pretitle }}</h3>
+          {% endif %}
+
+          {% if slide.title %}
+            <h2 class="a-heading{{ ' -color-' + slide.titlecolor if slide.titlecolor }}">{{ slide.title }}</h2>
+          {% endif %}
+
+          {% if slide.text %}
+            <div class="a-text{{ ' -color-' + slide.textcolor if slide.textcolor }}">
+              {{ slide.text }}
+            </div>
+          {% endif %}
+
+          {% if slide.button %}
+            {{ button_link (arrow = 'right', text = slide.button.text, href = slide.button.url, state = slide.button.state) }}
+          {% endif %}
+        </div>
+
+        {{ picture (sources = slide.image.sources, src = slide.image.default, srcNS = slide.image.noscript, alt = slide.image.alt) }}
+
+      </div>
+    {% else %}
+      <p>Não existem slides.</p>
+    {% endfor %}
+
+  </div>
+
+{% endmacro %}

@@ -22,6 +22,7 @@
 #}
 
 {% macro picture(alt = '', class = '', data = {}, id = '', sources = [], src = '', srcNS = '', srcset = '', srcsetNS = '', state = [], style = '', tabindex = '', title = '') %}
+
   <picture class="a-picture{{ ' ' + class if class }}{% for value in state %} -{{ value }}{% endfor %}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}{{ ' id="' + id + '"' if id }}{{ ' style="' + style + '"' if style }}{{ ' tabindex="' + tabindex + '"' if tabindex }}>
     {% for source in sources %}
       <source{{ ' srcset="' + source.srcset + '"' if source.srcset }}{{ ' media="' + source.media + '"' if source.media }}{{ ' sizes="' + source.sizes + '"' if source.sizes }}>
@@ -33,4 +34,5 @@
     {% endif %}
     <img{{ ' alt="' + alt + '"' if alt }}{{ ' src="' + src + '"' if src }}{{ ' srcset="' + srcset + '"' if srcset }}{{ ' title="' + title + '"' if title }}>
   </picture>
+
 {% endmacro %}

@@ -1,0 +1,146 @@
+[
+  {
+    "title": "Só dá grandes filmes",
+    "text": "Novo canal exclusivo NOS",
+    "position": "left",
+    "button": {
+      "text": "Saber mais",
+      "url": "https://www.nos.pt/particulares/televisao/canais/exclusivos/Pages/nos-studios.aspx?hp",
+      "state": ["primary", "light", "medium"]
+    },
+    "background": "yellow",
+    "titlecolor": "pink",
+    "textcolor": "",
+    "image": {
+      "alt": "",
+      "default": "https://www.nos.pt/particulares/PublishingImages/Banners/NOSStudios/banner400px/extra-large.png",
+      "noscript": "https://www.nos.pt/particulares/PublishingImages/Banners/NOSStudios/banner400px/large.png",
+      "sources": [
+        {
+          "media": "(min-width: 1360px), (min-device-pixel-ratio: 2.0)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/NOSStudios/banner400px/extra-large-retina.png"
+        },
+        {
+          "media": "(min-width: 1360px)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/NOSStudios/banner400px/extra-large.png"
+        },
+        {
+          "media": "(min-width: 769px), (min-device-pixel-ratio: 2.0)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/NOSStudios/banner400px/large-retina.png"
+        },
+        {
+          "media": "(min-width: 769px)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/NOSStudios/banner400px/large.png"
+        },
+        {
+          "media": "(min-width: 560px)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/NOSStudios/banner400px/medium.png"
+        },
+        {
+          "media": "(min-device-pixel-ratio: 2.0)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/NOSStudios/banner400px/small-retina.png"
+        },
+        {
+          "media": "(min-width: 200px)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/NOSStudios/banner400px/medium.png"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Junta mais um cartão e ganha o dobro dos dados",
+    "text": "Junta mais cartões ao pacote e ganha o dobro dos dados, minutos e SMS em todos os cartões",
+    "position": "left",
+    "button": {
+      "text": "Ver pacotes",
+      "url": "https://www.nos.pt/empresas/transformadores/Pages/transformadores.aspx",
+      "state": ["primary", "light", "medium"]
+    },
+    "background": "pink",
+    "titlecolor": "yellow",
+    "textcolor": "black",
+    "image": {
+      "alt": "",
+      "default": "https://www.nos.pt/particulares/PublishingImages/Banners/PacotesNOVAOFERTA/2Xdados/400px/extra-large.png",
+      "noscript": "https://www.nos.pt/particulares/PublishingImages/Banners/PacotesNOVAOFERTA/2Xdados/400px/large.png",
+      "sources": [
+        {
+          "media": "(min-width: 1360px), (min-device-pixel-ratio: 2.0)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/PacotesNOVAOFERTA/2Xdados/400px/extra-large-retina.png"
+        },
+        {
+          "media": "(min-width: 1360px)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/PacotesNOVAOFERTA/2Xdados/400px/extra-large.png"
+        },
+        {
+          "media": "(min-width: 768px), (min-device-pixel-ratio: 2.0)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/PacotesNOVAOFERTA/2Xdados/400px/large-retina.png"
+        },
+        {
+          "media": "(min-width: 768px)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/PacotesNOVAOFERTA/2Xdados/400px/large.png"
+        },
+        {
+          "media": "(min-width: 560px)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/PacotesNOVAOFERTA/2Xdados/400px/medium.png"
+        },
+        {
+          "media": "(min-device-pixel-ratio: 2.0)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/PacotesNOVAOFERTA/2Xdados/400px/small-retina.png"
+        },
+        {
+          "media": "(min-width: 200px)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/PacotesNOVAOFERTA/2Xdados/400px/medium.png"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Huawei P30 Lite",
+    "text": "Já disponível na loja online",
+    "position": "left",
+    "button": {
+      "text": "Saber mais",
+      "url": "https://www.nos.pt/particulares/loja-equipamentos/pages/details.aspx?p=28325",
+      "state": ["primary", "light", "medium"]
+    },
+    "background": "light-blue",
+    "titlecolor": "#fff",
+    "textcolor": "#fff",
+    "image": {
+      "alt": "",
+      "default": "https://www.nos.pt/particulares/PublishingImages/Banners/P30Lite/400px/compra/extra-large.png",
+      "noscript": "https://www.nos.pt/particulares/PublishingImages/Banners/P30Lite/400px/compra/large-retina.jpg",
+      "sources": [
+        {
+          "media": "(min-width: 1360px), (min-device-pixel-ratio: 2.0)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/P30Lite/400px/compra/extra-large-retina.png"
+        },
+        {
+          "media": "(min-width: 1360px)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/P30Lite/400px/compra/extra-large.png"
+        },
+        {
+          "media": "(min-width: 768px), (min-device-pixel-ratio: 2.0)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/P30Lite/400px/compra/large-retina.png"
+        },
+        {
+          "media": "(min-width: 768px)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/P30Lite/400px/compra/large.png"
+        },
+        {
+          "media": "(min-width: 560px)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/P30Lite/400px/compra/medium.png"
+        },
+        {
+          "media": "(min-device-pixel-ratio: 2.0)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/P30Lite/400px/compra/small-retina.png"
+        },
+        {
+          "media": "(min-width: 200px)",
+          "url": "https://www.nos.pt/particulares/PublishingImages/Banners/P30Lite/400px/compra/medium.png"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,31 @@
+{% from '../../../patterns/organisms/_banner_gallery.njk' import banner_gallery %}
+
+{% extends '../../../patterns/templates/_page.njk' %}
+
+{% block cssPlugins %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
+  <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+{% endblock %}
+{% block cssMain %}
+  {{ super() }}
+  <link rel="stylesheet" href="assets/css/banner_gallery.webpart.css">
+{% endblock %}
+{% block jsPlugins %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
+{% endblock %}
+{% block siteHeader %}{% endblock %}
+{% block siteFooter %}{% endblock %}
+
+{% block main %}
+
+  <div class="-reset-to-full">
+
+    {{ banner_gallery (slides = slides) }}
+
+
+
+    <div class="a-loader"></div>
+
+  </div>
+
+{% endblock %}
