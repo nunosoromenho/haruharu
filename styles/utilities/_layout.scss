@@ -1,4 +1,21 @@
+/**
+ * @utility layout
+ * @section haruharu/utilities/_layout.scss
+ *
+ * @index
+ *  Container
+ *  Center
+ *  Clear
+ *  Grid
+ *  Cols
+**/
+
 $nos-site-width: 960px;
+$grid-cell: 100% / 12;
+
+/**
+ * Container
+**/
 
 .-contain {
   padding-right: calc((100vw -  #{$nos-site-width}) / 2)!important;
@@ -29,22 +46,95 @@ $nos-site-width: 960px;
   }
 }
 
-.-center-flex {
+/**
+ * Center
+**/
+
+.-center-margin,
+.-center-1 {
+  margin: 0 auto!important;
+}
+
+.-center-text,
+.-center-2 {
+  text-align: center!important;
+}
+
+.-center-flex,
+.-center-3 {
   display: flex!important;
   align-items: center!important;
   justify-content: center!important;
 }
 
-.-center-flex-horz {
+.-center-flex-horz,
+.-center-4 {
   display: flex!important;
   justify-content: center!important;
 }
 
-.-center-flex-vert {
+.-center-flex-vert,
+.-center-5 {
   display: flex!important;
   align-items: center!important;
 }
+
+/**
+ * Clear
+**/
 
 .-clear {
-  display: table!important;
+  clear: both;
+}
+
+.-clear-right {
+  clear: right;
+}
+
+.-clear-left {
+  clear: left;
+}
+
+/**
+ * Grid
+**/
+
+.l-grid {
+  display: grid!important;
+}
+
+.l-flex {
+  display: flex!important;
+}
+
+.-ai-c {
+  align-items: center!important;
+}
+
+.-jc-c {
+  justify-content: center;
+}
+
+.-jc-sa {
+  justify-content: space-around;
+}
+
+.-jc-sb {
+  justify-content: space-between;
+}
+
+.-pc-c {
+  align-items: center;
+  justify-content: center;
+  place-content: center;
+}
+
+/**
+ * Cols
+**/
+
+@for $i from 1 through 12 {
+  .-col#{$i} {
+    width: $grid-cell * $i;
+  }
 }

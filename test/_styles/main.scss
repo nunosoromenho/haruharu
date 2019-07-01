@@ -1,6 +1,6 @@
 /**
  * Helpers
- */
+**/
 
 @import '../../styles/helpers/*';
 
@@ -8,9 +8,16 @@
 
 @import './atoms/loader';
 
+/**
+ * Components
+**/
+
+@import '../../styles/atoms/*';
+@import '../../styles/organisms/*';
+
 
 /**
  * Utilities
- */
+**/
 
 @import '../../styles/utilities/*';

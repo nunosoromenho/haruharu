@@ -1,4 +1,5 @@
 {% from '../../../patterns/organisms/_banner_gallery.njk' import banner_gallery %}
+{% from '../../../patterns/atoms/_link.njk' import link %}
 
 {% extends '../../../patterns/templates/_page.njk' %}
 
@@ -20,11 +21,13 @@
 
   <div class="-reset-to-full">
 
+    <h1 class="-center-text">{{ project.title }} — {{ project.subtitle }}</h1>
+
     {{ banner_gallery (slides = slides) }}
 
-
-
     <div class="a-loader"></div>
+
+    {{ link (text = 'Saber mais sobre o Power Wi-Fi', href="#") }}
 
   </div>
 

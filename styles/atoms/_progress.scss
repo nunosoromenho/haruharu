@@ -1,3 +1,21 @@
+/**
+ * @atom Progress
+ * @section haruharu/styles/atoms/_progress.scss
+ *
+ * @markup
+ *  <div class="a-progress">
+ *    <progress max="100" value="10">
+ *      <div class="progress-fallback">
+ *        <span>Progresso: 10%</span>
+ *      </div>
+ *    </progress>
+ *    <label><span>10</span>/100 Respondidas</label>
+ *  </div>
+ *
+ * @index
+ *  Progress
+**/
+
 .progress {
   > progress {
     appearance: none;
