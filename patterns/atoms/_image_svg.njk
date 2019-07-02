@@ -1,0 +1,3 @@
+{% macro image_svg (src='', alt='', class='') %}
+  <img src="{{ src }}" alt="{{ alt }}" class="a-image-svg{{ ' ' + class if class }}">
+{% endmacro %}
