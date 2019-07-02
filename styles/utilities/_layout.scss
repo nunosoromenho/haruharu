@@ -13,9 +13,7 @@
 $nos-site-width: 960px;
 $grid-cell: 100% / 12;
 
-/**
- * Container
-**/
+// Container
 
 .-contain {
   padding-right: calc((100vw -  #{$nos-site-width}) / 2)!important;
@@ -46,9 +44,7 @@ $grid-cell: 100% / 12;
   }
 }
 
-/**
- * Center
-**/
+// Center
 
 .-center-margin,
 .-center-1 {
@@ -79,9 +75,7 @@ $grid-cell: 100% / 12;
   align-items: center!important;
 }
 
-/**
- * Clear
-**/
+// Clear
 
 .-clear {
   clear: both;
@@ -95,9 +89,7 @@ $grid-cell: 100% / 12;
   clear: left;
 }
 
-/**
- * Grid
-**/
+// Grid
 
 .l-grid {
   display: grid!important;
@@ -129,9 +121,7 @@ $grid-cell: 100% / 12;
   place-content: center;
 }
 
-/**
- * Cols
-**/
+// Cols
 
 @for $i from 1 through 12 {
   .-col#{$i} {
