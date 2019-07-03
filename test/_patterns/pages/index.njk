@@ -14,14 +14,13 @@
 {% block jsPlugins %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
 {% endblock %}
-{% block siteHeader %}{% endblock %}
-{% block siteFooter %}{% endblock %}
+
 
 {% block main %}
 
   <div class="-reset-to-full">
 
-    <h1 class="-center-text">{{ project.title }} — {{ project.subtitle }}</h1>
+    <h1 class="-center-text" style="margin: 16px 0;">{{ project.title }} — {{ project.subtitle }}</h1>
 
     {{ banner_gallery (slides = slides) }}
 
