@@ -321,6 +321,34 @@ input.a-input {
   border-bottom: none;
 }
 
+.a-loader {
+  width: 40px;
+  height: 40px;
+  margin: 40px auto;
+  background-image: url("../_site/assets/images/parallax-element-2.png");
+  background-size: cover;
+  -webkit-animation: rotation 1s infinite linear;
+          animation: rotation 1s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 /**
  * @atom Progress
  * @section haruharu/styles/atoms/_progress.scss

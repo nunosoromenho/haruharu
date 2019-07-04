@@ -30,7 +30,7 @@
       {% include '../organisms/_header.njk' %}
     {% endblock %}
 
-    <div class="o-site-main -contain">
+    <div class="o-site-main{{ ' ' + project.mainClasses if project.mainClasses }} -contain">
       {% block main %}{% endblock %}
     </div>
 
