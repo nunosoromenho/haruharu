@@ -1032,6 +1032,14 @@ p + p {
   margin-left: calc((100vw - 960px) / 2 * -1) !important;
 }
 
+.-align-right-text {
+  text-align: right !important;
+}
+
+.-align-left-text {
+  text-align: left !important;
+}
+
 .-center-margin,
 .-center-1 {
   margin: 0 auto !important;
@@ -1094,9 +1102,29 @@ p + p {
       align-items: center !important;
 }
 
+.-ai-s {
+  -ms-flex-align: start !important;
+      align-items: start !important;
+}
+
+.-ai-e {
+  -ms-flex-align: end !important;
+      align-items: end !important;
+}
+
 .-jc-c {
   -ms-flex-pack: center !important;
       justify-content: center !important;
+}
+
+.-jc-s {
+  -ms-flex-pack: start !important;
+      justify-content: start !important;
+}
+
+.-jc-e {
+  -ms-flex-pack: end !important;
+      justify-content: end !important;
 }
 
 .-jc-sa {
