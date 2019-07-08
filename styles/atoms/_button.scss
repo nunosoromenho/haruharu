@@ -22,17 +22,13 @@
 .a-button,
 a.a-button,
 button.a-button {
-  display: inline;
-
+  display: inline-block;
   padding: 0 24px;
-
   border: 1px solid $charcoal;
-
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
   line-height: 1;
-
   position: relative;
 
   @media (max-width: 700px) {
@@ -107,7 +103,7 @@ button.a-button {
     transition: padding .4s;
     position: relative;
 
-    &::before {
+    &::after {
       content: '';
       font-family: 'fontcustom';
       transition: opacity .4s;
@@ -116,26 +112,26 @@ button.a-button {
     }
 
     &.icon-arrow-top {
-      &::before {
+      &::after {
         content: '\fb72';
       }
     }
 
     &.icon-arrow-right {
-      &::before {
+      &::after {
         content: '\fb71';
         right: 8px;
       }
     }
 
     &.icon-arrow-down {
-      &::before {
+      &::after {
         content: '\fb6f';
       }
     }
 
     &.icon-arrow-left {
-      &::before {
+      &::after {
         content: '\fb70';
         left: 8px;
       }
@@ -143,7 +139,7 @@ button.a-button {
 
     &:hover {
 
-      &::before {
+      &::after {
         opacity: 1;
       }
 
@@ -155,6 +151,12 @@ button.a-button {
         padding: 0 20px 0 28px;
       }
     }
+  }
+
+  &.-clear::before {
+    content: '';
+    display: block;
+    clear: both;
   }
 
   // Button States

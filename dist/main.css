@@ -91,7 +91,7 @@ html, body {
 .a-button,
 a.a-button,
 button.a-button {
-  display: inline;
+  display: inline-block;
   padding: 0 24px;
   border: 1px solid #1e1f27;
   font-size: 14px;
@@ -178,9 +178,9 @@ button.a-button.-has-icon {
   position: relative;
 }
 
-.a-button.-has-icon::before,
-a.a-button.-has-icon::before,
-button.a-button.-has-icon::before {
+.a-button.-has-icon::after,
+a.a-button.-has-icon::after,
+button.a-button.-has-icon::after {
   content: '';
   font-family: 'fontcustom';
   transition: opacity .4s;
@@ -188,35 +188,35 @@ button.a-button.-has-icon::before {
   opacity: 0;
 }
 
-.a-button.-has-icon.icon-arrow-top::before,
-a.a-button.-has-icon.icon-arrow-top::before,
-button.a-button.-has-icon.icon-arrow-top::before {
+.a-button.-has-icon.icon-arrow-top::after,
+a.a-button.-has-icon.icon-arrow-top::after,
+button.a-button.-has-icon.icon-arrow-top::after {
   content: '\fb72';
 }
 
-.a-button.-has-icon.icon-arrow-right::before,
-a.a-button.-has-icon.icon-arrow-right::before,
-button.a-button.-has-icon.icon-arrow-right::before {
+.a-button.-has-icon.icon-arrow-right::after,
+a.a-button.-has-icon.icon-arrow-right::after,
+button.a-button.-has-icon.icon-arrow-right::after {
   content: '\fb71';
   right: 8px;
 }
 
-.a-button.-has-icon.icon-arrow-down::before,
-a.a-button.-has-icon.icon-arrow-down::before,
-button.a-button.-has-icon.icon-arrow-down::before {
+.a-button.-has-icon.icon-arrow-down::after,
+a.a-button.-has-icon.icon-arrow-down::after,
+button.a-button.-has-icon.icon-arrow-down::after {
   content: '\fb6f';
 }
 
-.a-button.-has-icon.icon-arrow-left::before,
-a.a-button.-has-icon.icon-arrow-left::before,
-button.a-button.-has-icon.icon-arrow-left::before {
+.a-button.-has-icon.icon-arrow-left::after,
+a.a-button.-has-icon.icon-arrow-left::after,
+button.a-button.-has-icon.icon-arrow-left::after {
   content: '\fb70';
   left: 8px;
 }
 
-.a-button.-has-icon:hover::before,
-a.a-button.-has-icon:hover::before,
-button.a-button.-has-icon:hover::before {
+.a-button.-has-icon:hover::after,
+a.a-button.-has-icon:hover::after,
+button.a-button.-has-icon:hover::after {
   opacity: 1;
 }
 
@@ -230,6 +230,14 @@ button.a-button.-has-icon:hover.icon-arrow-right {
 a.a-button.-has-icon:hover.icon-arrow-left,
 button.a-button.-has-icon:hover.icon-arrow-left {
   padding: 0 20px 0 28px;
+}
+
+.a-button.-clear::before,
+a.a-button.-clear::before,
+button.a-button.-clear::before {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .a-button:active,
