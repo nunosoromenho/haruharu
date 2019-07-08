@@ -353,147 +353,6 @@ input.a-input {
 }
 
 /**
- * @atom Progress
- * @section haruharu/styles/atoms/_progress.scss
- *
- * @markup
- *  <div class="a-progress">
- *    <progress max="100" value="10">
- *      <div class="progress-fallback">
- *        <span>Progresso: 10%</span>
- *      </div>
- *    </progress>
- *    <label><span>10</span>/100 Respondidas</label>
- *  </div>
- *
- * @index
- *  Progress
-**/
-.progress > progress {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 100%;
-  height: 5px;
-  background: none;
-  border: none;
-}
-
-.progress > progress[value] {
-  height: 3px;
-  background-color: #dddee3;
-}
-
-.progress > progress[value]::-webkit-progress-bar {
-  height: 3px;
-  background-color: #dddee3;
-}
-
-.progress > progress[value]::-webkit-progress-value {
-  height: 5px;
-  background-color: #bad80a;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.13);
-  position: relative;
-  top: -1px;
-}
-
-.progress > progress[value]::-moz-progress-bar {
-  height: 5px;
-  background-color: #bad80a;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.13);
-  margin-top: -1px;
-}
-
-.progress .progress-bar {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #dddee3;
-  position: relative;
-}
-
-.progress .progress-bar > span {
-  display: block;
-  width: 100%;
-  height: 5px;
-  background-color: #bad80a;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.13);
-  position: relative;
-  top: -1px;
-  text-indent: -9999px;
-}
-
-.progress > label {
-  font-size: 12px;
-  color: #74757d;
-  line-height: 1.5;
-}
-
-.progress > label span {
-  color: #6ea514;
-}
-
-.radio-group {
-  margin-bottom: 16px;
-}
-
-.radio-group > label {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  min-height: 70px;
-  padding: 0 24px;
-  background-color: #ffffff;
-  border: 2px solid transparent;
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.13);
-  cursor: pointer;
-}
-
-.radio-group > label > span {
-  font-size: 16px;
-  font-weight: bold;
-  color: #35363E;
-}
-
-.radio-group > label .subtitle {
-  display: block;
-  font-size: 12px;
-  font-weight: normal;
-  color: #35363E;
-  line-height: 2;
-}
-
-.radio-group > label i {
-  display: none;
-  font-size: 24px;
-}
-
-.radio-group > input[type="radio"] {
-  display: none;
-}
-
-.radio-group > input[type="radio"]:checked + label {
-  border: 2px solid #6ea514;
-  box-shadow: none;
-  color: #6ea514;
-}
-
-.radio-group > input[type="radio"]:checked + label > span {
-  color: #6ea514;
-}
-
-.radio-group > input[type="radio"]:checked + label .subtitle {
-  color: #6ea514;
-}
-
-.radio-group > input[type="radio"]:checked + label i {
-  display: block;
-}
-
-/**
  * @molecule Block
  * @section haruharu/styles/molecules/_block.scss
  *
@@ -508,6 +367,213 @@ input.a-input {
  * @index
  *  Block
 **/
+/**
+ * @molecule Loader
+ * @section haruharu/styles/molecules/_loader.scss
+ *
+ * @modifiers
+ *  .-visible
+ *  .-light / .-dark
+ *
+ * @markup
+ *  <div class="m-loader -visible"></div>
+ *
+ * @index
+ *  Button
+**/
+.m-loader {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.m-loader.-visible {
+  display: block;
+}
+
+.m-loader::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  opacity: .8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.m-loader.-dark::before {
+  background-color: #1e1f27;
+}
+
+.m-loader.-light::before {
+  background-color: #FFFFFF;
+}
+
+.m-loader::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: url("/particulares/_layouts/15/Armstrong/img/loop_loader.gif");
+  background-position: center 200px;
+  background-repeat: no-repeat;
+  background-size: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/**
+ * @molecules Progress
+ * @section haruharu/styles/molecules/_progress.scss
+ *
+ * @markup
+ *  <div class="m-progress">
+ *    <progress max="100" value="10">
+ *      <div class="a-progress-fallback">
+ *        <span>Progresso: 10%</span>
+ *      </div>
+ *    </progress>
+ *    <label><span>10</span>/100 Respondidas</label>
+ *  </div>
+ *
+ * @index
+ *  Progress
+**/
+.m-progress-block > progress {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  height: 5px;
+  background: none;
+  border: none;
+}
+
+.m-progress-block > progress[value] {
+  height: 3px;
+  background-color: #dddee3;
+}
+
+.m-progress-block > progress[value]::-webkit-progress-bar {
+  height: 3px;
+  background-color: #dddee3;
+}
+
+.m-progress-block > progress[value]::-webkit-progress-value {
+  height: 5px;
+  background-color: #bad80a;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.13);
+  position: relative;
+  top: -1px;
+}
+
+.m-progress-block > progress[value]::-moz-progress-bar {
+  height: 5px;
+  background-color: #bad80a;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.13);
+  margin-top: -1px;
+}
+
+.m-progress-block .a-progress-bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #dddee3;
+  position: relative;
+}
+
+.m-progress-block .a-progress-bar > span {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #bad80a;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.13);
+  position: relative;
+  top: -1px;
+  text-indent: -9999px;
+}
+
+.m-progress-block > label {
+  font-size: 12px;
+  color: #74757d;
+  line-height: 1.5;
+}
+
+.m-progress-block > label > span {
+  color: #6ea514;
+}
+
+/**
+ * @molecules Radio Block
+ * @section haruharu/styles/molecules/_radio_block.scss
+**/
+.m-radio-group {
+  margin-bottom: 16px;
+}
+
+.m-radio-group > label {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  min-height: 70px;
+  padding: 0 24px;
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.13);
+  cursor: pointer;
+}
+
+.m-radio-group > label > span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #35363E;
+}
+
+.m-radio-group > label .subtitle {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  color: #35363E;
+  line-height: 2;
+}
+
+.m-radio-group > label i {
+  display: none;
+  font-size: 24px;
+}
+
+.m-radio-group > input[type="radio"] {
+  display: none;
+}
+
+.m-radio-group > input[type="radio"]:checked + label {
+  border: 2px solid #6ea514;
+  box-shadow: none;
+  color: #6ea514;
+}
+
+.m-radio-group > input[type="radio"]:checked + label > span {
+  color: #6ea514;
+}
+
+.m-radio-group > input[type="radio"]:checked + label .subtitle {
+  color: #6ea514;
+}
+
+.m-radio-group > input[type="radio"]:checked + label i {
+  display: block;
+}
+
 .o-site-header {
   height: 80px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -1052,51 +1118,51 @@ p + p {
 }
 
 .-col1 {
-  width: 8.33333%;
+  width: calc(8.33333% - 16px);
 }
 
 .-col2 {
-  width: 16.66667%;
+  width: calc(16.66667% - 16px);
 }
 
 .-col3 {
-  width: 25%;
+  width: calc(25% - 16px);
 }
 
 .-col4 {
-  width: 33.33333%;
+  width: calc(33.33333% - 16px);
 }
 
 .-col5 {
-  width: 41.66667%;
+  width: calc(41.66667% - 16px);
 }
 
 .-col6 {
-  width: 50%;
+  width: calc(50% - 16px);
 }
 
 .-col7 {
-  width: 58.33333%;
+  width: calc(58.33333% - 16px);
 }
 
 .-col8 {
-  width: 66.66667%;
+  width: calc(66.66667% - 16px);
 }
 
 .-col9 {
-  width: 75%;
+  width: calc(75% - 16px);
 }
 
 .-col10 {
-  width: 83.33333%;
+  width: calc(83.33333% - 16px);
 }
 
 .-col11 {
-  width: 91.66667%;
+  width: calc(91.66667% - 16px);
 }
 
 .-col12 {
-  width: 100%;
+  width: calc(100% - 16px);
 }
 
 .-mt-0 {

@@ -1,11 +1,11 @@
 /**
- * @atom Progress
- * @section haruharu/styles/atoms/_progress.scss
+ * @molecules Progress
+ * @section haruharu/styles/molecules/_progress_block.scss
  *
  * @markup
- *  <div class="a-progress">
+ *  <div class="m-progress">
  *    <progress max="100" value="10">
- *      <div class="progress-fallback">
+ *      <div class="a-progress-fallback">
  *        <span>Progresso: 10%</span>
  *      </div>
  *    </progress>
@@ -16,7 +16,7 @@
  *  Progress
 **/
 
-.progress {
+.m-progress-block {
   > progress {
     appearance: none;
     width: 100%;
@@ -50,7 +50,7 @@
     }
   }
 
-  .progress-bar {
+  .a-progress-bar {
     display: block;
     width: 100%;
     height: 3px;
@@ -74,7 +74,7 @@
     color: $ash;
     line-height: 1.5;
 
-    span {
+    > span {
       color: $nos-green;
     }
   }

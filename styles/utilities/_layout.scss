@@ -149,8 +149,9 @@ p + p {
 // Cols
 
 @for $i from 1 through 12 {
+  $width: $grid-cell * $i;
   .-col#{$i} {
-    width: $grid-cell * $i;
+    width: calc(#{$width} - 16px);
   }
 }
 

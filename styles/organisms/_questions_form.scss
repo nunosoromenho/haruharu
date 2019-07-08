@@ -1,0 +1,76 @@
+.o-questions {
+
+  h1 {
+    margin: 0 0 16px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.4;
+
+    & + p {
+      margin-bottom: 24px;
+      font-size: 14px;
+      color: $nos-dark-4;
+    }
+
+    & + .radio-group {
+      margin-top: 24px;
+    }
+  }
+}
+
+.m-recomendation-box {
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: $nos-dark-1;
+    text-align: center;
+    line-height: 1.29;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: $nos-dark-1;
+    text-align: center;
+    line-height: 1.94;
+  }
+}
+
+.a-circles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 385px;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  rgba(75, 219, 197, 0.15);
+    border-radius: 100%;
+  }
+
+  .circle-1 {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(75, 219, 197, 0.35);
+  }
+
+  @for $i from 1 through 9 {
+    .circle-#{$i + 1} {
+      width: 120px + 50px * $i;
+      height: 120px + 50px * $i;
+    }
+  }
+
+  img {
+    width: 60px;
+  }
+}
