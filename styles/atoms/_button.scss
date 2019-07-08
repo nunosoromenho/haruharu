@@ -22,7 +22,7 @@
 .a-button,
 a.a-button,
 button.a-button {
-  display: inline-flex;
+  display: inline;
 
   padding: 0 24px;
 
@@ -34,7 +34,6 @@ button.a-button {
   line-height: 1;
 
   position: relative;
-  clear: both;
 
   @media (max-width: 700px) {
     text-align: center;

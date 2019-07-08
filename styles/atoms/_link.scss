@@ -16,13 +16,12 @@
 **/
 
 .a-link {
-  display: inline-block;
+  display: inline;
   border-bottom: 1px solid $nos-light-green;
   font-weight: 500;
   color: $charcoal;
   text-decoration: none;
   line-height: 1.4;
-  clear: both;
   position: relative;
 
   @media (max-width: 700px) {
@@ -31,9 +30,5 @@
 
   &:hover {
     border-bottom: none;
-  }
-
-  &.-clear {
-    display: table;
   }
 }
