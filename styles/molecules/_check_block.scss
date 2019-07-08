@@ -1,9 +1,9 @@
 /**
- * @molecules Radio Block
+ * @molecules check Block
  * @section haruharu/styles/molecules/_radio_block.scss
 **/
 
-.m-radio-block {
+.m-check-block {
   margin-bottom: 16px;
 
   > label {
@@ -37,7 +37,8 @@
     }
   }
 
-  > input[type="radio"] {
+  > input[type="radio"],
+  > input[type="checkbox"] {
     display: none;
 
     &:checked + label {

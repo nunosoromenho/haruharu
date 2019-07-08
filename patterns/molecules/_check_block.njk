@@ -1,6 +1,6 @@
-{% macro radio_block (value = '', subtitle = '', name = '', target = '') %}
-  <div class="m-radio-block">
-    <input type="radio" name="{{ name }}" id="{{ value | urlencode }}" value="{{ value }}" data-target="{{ target }}">
+{% macro check_block (type = 'radio', value = '', subtitle = '', name = '', target = '') %}
+  <div class="m-check-block">
+    <input type="{{ type }}" name="{{ name }}" id="{{ value | urlencode }}" value="{{ value }}" data-target="{{ target }}">
     <label for="{{ value | urlencode }}">
       <span>
         {{ value }}
