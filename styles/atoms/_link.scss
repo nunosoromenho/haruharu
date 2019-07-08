@@ -32,4 +32,8 @@
   &:hover {
     border-bottom: none;
   }
+
+  &.-clear {
+    display: table;
+  }
 }
