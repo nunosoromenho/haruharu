@@ -298,6 +298,7 @@ input.a-input {
 **/
 .a-link {
   display: inline;
+  padding-bottom: 2px;
   border-bottom: 1px solid #bad80a;
   font-weight: 500;
   color: #1e1f27;
@@ -849,71 +850,71 @@ body.overlay-open {
   background-color: #000000 !important;
 }
 
-.-color-light-blue {
+.-color-light-blue, .-color-light-blue p {
   color: #4bdbc5 !important;
 }
 
-.-color-dark-blue {
+.-color-dark-blue, .-color-dark-blue p {
   color: #414982 !important;
 }
 
-.-color-green {
+.-color-green, .-color-green p {
   color: #6ea514 !important;
 }
 
-.-color-light-green {
+.-color-light-green, .-color-light-green p {
   color: #bad80a !important;
 }
 
-.-color-pink {
+.-color-pink, .-color-pink p {
   color: #eb84cd !important;
 }
 
-.-color-yellow {
+.-color-yellow, .-color-yellow p {
   color: #fcd200 !important;
 }
 
-.-color-red {
+.-color-red, .-color-red p {
   color: #e04232 !important;
 }
 
-.-color-charcoal {
+.-color-charcoal, .-color-charcoal p {
   color: #1e1f27 !important;
 }
 
-.-color-midnight {
+.-color-midnight, .-color-midnight p {
   color: #35363E !important;
 }
 
-.-color-shadow {
+.-color-shadow, .-color-shadow p {
   color: #5b5c64 !important;
 }
 
-.-color-ash {
+.-color-ash, .-color-ash p {
   color: #74757d !important;
 }
 
-.-color-steel {
+.-color-steel, .-color-steel p {
   color: #94959d !important;
 }
 
-.-color-smoke {
+.-color-smoke, .-color-smoke p {
   color: #bbbcc4 !important;
 }
 
-.-color-pearl {
+.-color-pearl, .-color-pearl p {
   color: #dddee3 !important;
 }
 
-.-color-bone {
+.-color-bone, .-color-bone p {
   color: #efeff1 !important;
 }
 
-.-color-white {
+.-color-white, .-color-white p {
   color: #FFFFFF !important;
 }
 
-.-color-black {
+.-color-black, .-color-black p {
   color: #000000 !important;
 }
 
@@ -941,6 +942,10 @@ p + p {
 
 .compact * + * {
   margin-top: 0.75em;
+}
+
+.margins-off > * {
+  margin-top: 0;
 }
 
 .-contain {
