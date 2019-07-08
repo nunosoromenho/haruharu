@@ -431,7 +431,7 @@ input.a-input {
 
 /**
  * @molecules Progress
- * @section haruharu/styles/molecules/_progress.scss
+ * @section haruharu/styles/molecules/_progress_block.scss
  *
  * @markup
  *  <div class="m-progress">
@@ -514,11 +514,11 @@ input.a-input {
  * @molecules Radio Block
  * @section haruharu/styles/molecules/_radio_block.scss
 **/
-.m-radio-group {
+.m-radio-block {
   margin-bottom: 16px;
 }
 
-.m-radio-group > label {
+.m-radio-block > label {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -533,13 +533,13 @@ input.a-input {
   cursor: pointer;
 }
 
-.m-radio-group > label > span {
+.m-radio-block > label > span {
   font-size: 16px;
   font-weight: bold;
   color: #35363E;
 }
 
-.m-radio-group > label .subtitle {
+.m-radio-block > label .subtitle {
   display: block;
   font-size: 12px;
   font-weight: normal;
@@ -547,30 +547,30 @@ input.a-input {
   line-height: 2;
 }
 
-.m-radio-group > label i {
+.m-radio-block > label i {
   display: none;
   font-size: 24px;
 }
 
-.m-radio-group > input[type="radio"] {
+.m-radio-block > input[type="radio"] {
   display: none;
 }
 
-.m-radio-group > input[type="radio"]:checked + label {
+.m-radio-block > input[type="radio"]:checked + label {
   border: 2px solid #6ea514;
   box-shadow: none;
   color: #6ea514;
 }
 
-.m-radio-group > input[type="radio"]:checked + label > span {
+.m-radio-block > input[type="radio"]:checked + label > span {
   color: #6ea514;
 }
 
-.m-radio-group > input[type="radio"]:checked + label .subtitle {
+.m-radio-block > input[type="radio"]:checked + label .subtitle {
   color: #6ea514;
 }
 
-.m-radio-group > input[type="radio"]:checked + label i {
+.m-radio-block > input[type="radio"]:checked + label i {
   display: block;
 }
 
