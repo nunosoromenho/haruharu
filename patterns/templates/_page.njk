@@ -26,22 +26,26 @@
   </head>
   <body{{ ' class="' + project.bodyclasses + '"' if project.bodyclasses }}>
 
-    {% block siteHeader %}
-      {% include '../organisms/_header.njk' %}
-    {% endblock %}
+    <div class="o-site">
 
-    <div class="o-site-main{{ ' ' + project.mainClasses if project.mainClasses }} -contain">
-      {% block main %}{% endblock %}
+      {% block siteHeader %}
+        {% include '../organisms/_header.njk' %}
+      {% endblock %}
+
+      <div class="o-site-main{{ ' ' + project.mainClasses if project.mainClasses }} -contain">
+        {% block main %}{% endblock %}
+      </div>
+
+      {% block siteFooter %}
+        {% include '../organisms/_footer.njk' %}
+      {% endblock %}
+
+      {% block jsPlugins %}{% endblock %}
+      {% block jsMain %}
+        <script src="assets/js/main.js"></script>
+      {% endblock %}
+
     </div>
-
-    {% block siteFooter %}
-      {% include '../organisms/_footer.njk' %}
-    {% endblock %}
-
-    {% block jsPlugins %}{% endblock %}
-    {% block jsMain %}
-      <script src="assets/js/main.js"></script>
-    {% endblock %}
 
   </body>
 </html>

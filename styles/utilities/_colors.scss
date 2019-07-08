@@ -1,3 +1,14 @@
+/**
+ * @utility Colors
+ * @section haruharu/utilities/_colors.scss
+ *
+ * @index
+ *  Background
+ *  Color
+**/
+
+// Background
+
 .-bg-blue { background-color: $nos-blue!important; }
 .-bg-light-blue { background-color: $nos-light-blue!important; }
 .-bg-dark-blue { background-color: $nos-dark-blue!important; }
@@ -19,6 +30,7 @@
 .-bg-white { background-color: $white!important; }
 .-bg-black { background-color: $black!important; }
 
+// Color
 
 .-color-light-blue { color: $nos-light-blue!important; }
 .-color-dark-blue { color: $nos-dark-blue!important; }

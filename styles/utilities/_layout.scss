@@ -3,15 +3,36 @@
  * @section haruharu/utilities/_layout.scss
  *
  * @index
+ *  Lobotomized Owl
  *  Container
  *  Center
  *  Clear
  *  Grid
  *  Cols
+ *  Margin
+ *  Padding
 **/
 
 $nos-site-width: 960px;
 $grid-cell: 100% / 12;
+
+$max-space: 80;
+$offset-space: 8;
+$unit-space: 'px';
+
+// Lobotomized Owl
+
+.o-site * + * {
+  margin-top: 1rem;
+}
+
+p + p {
+  margin-top: 0;
+}
+
+.compact * + * {
+	margin-top: 0.75em;
+}
 
 // Container
 
@@ -104,21 +125,21 @@ $grid-cell: 100% / 12;
 }
 
 .-jc-c {
-  justify-content: center;
+  justify-content: center!important;
 }
 
 .-jc-sa {
-  justify-content: space-around;
+  justify-content: space-around!important;
 }
 
 .-jc-sb {
-  justify-content: space-between;
+  justify-content: space-between!important;
 }
 
 .-pc-c {
-  align-items: center;
-  justify-content: center;
-  place-content: center;
+  align-items: center!important;
+  justify-content: center!important;
+  place-content: center!important;
 }
 
 // Cols
@@ -128,3 +149,48 @@ $grid-cell: 100% / 12;
     width: $grid-cell * $i;
   }
 }
+
+// Margin
+
+@mixin boxModelHelperClasses($className, $styleName, $styleName2 : null) {
+ $i: 0;
+ @while $i <= $max-space {
+   #{$className + $i} {
+     #{$styleName}: #{$i + $unit-space}!important;
+     @if $styleName2 != null {
+       #{$styleName2}: #{$i + $unit-space}!important;
+     }
+   }
+   $i: $i + $offset-space;
+ }
+}
+
+@include boxModelHelperClasses('.-mt-', 'margin-top');
+@include boxModelHelperClasses('.-mr-', 'margin-right');
+@include boxModelHelperClasses('.-mb-', 'margin-bottom');
+@include boxModelHelperClasses('.-ml-', 'margin-left');
+@include boxModelHelperClasses('.-my-', 'margin-top', 'margin-bottom');
+@include boxModelHelperClasses('.-mx-', 'margin-left', 'margin-right');
+
+
+// Padding
+
+@mixin boxModelHelperClasses($className, $styleName, $styleName2 : null) {
+  $i: 0;
+  @while $i <= $max-space {
+    #{$className + $i} {
+      #{$styleName}: #{$i + $unit-space}!important;
+      @if $styleName2 != null {
+        #{$styleName2}: #{$i + $unit-space}!important;
+      }
+    }
+    $i: $i + $offset-space;
+  }
+}
+
+@include boxModelHelperClasses('.-pt-', 'padding-top');
+@include boxModelHelperClasses('.-pr-', 'padding-right');
+@include boxModelHelperClasses('.-pb-', 'padding-bottom');
+@include boxModelHelperClasses('.-pl-', 'padding-left');
+@include boxModelHelperClasses('.-py-', 'padding-top', 'padding-bottom');
+@include boxModelHelperClasses('.-px-', 'padding-left', 'padding-right');

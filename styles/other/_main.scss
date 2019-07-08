@@ -1,5 +1,5 @@
 html {
-  font-size: 100%;
+  font-size: 16px;
   overflow-x: auto;
   box-sizing: border-box;
   color: $charcoal;
@@ -15,11 +15,3 @@ html, body {
   padding: 0;
 }
 
-p {
-  margin: 0;
-
-  &:not(:first-child),
-  &:not(:first-of-type) {
-    margin-bottom: 1em;
-  }
-}

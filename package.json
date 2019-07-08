@@ -1,6 +1,6 @@
 {
   "name": "haruharu",
-  "version": "1.0.0-alpha.23",
+  "version": "1.0.0-alpha.24",
   "description": "Design System",
   "repository": "github:nunosoromenho/haruharu",
   "author": "Nuno Sequeira",
@@ -38,8 +38,8 @@
     "dist": "rimraf dist/ && npm run dist:build"
   },
   "devDependencies": {
-    "acorn": "^6.1.1",
-    "autoprefixer": "^9.6.0",
+    "acorn": "^6.2.0",
+    "autoprefixer": "^9.6.1",
     "browser-sync": "^2.26.7",
     "css-mqpacker": "^7.0.0",
     "eslint": "^6.0.1",
