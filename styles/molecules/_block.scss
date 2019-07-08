@@ -6,30 +6,11 @@
  *  .-primary / .-secondary
  *  .-light / .-dark
  *  .-small / .-medium / .-big
- *  .-has-icon
  *
  * @markup
  *  <div class="m-block"></div>
  *
  * @index
- *  Link
+ *  Block
 **/
 
-.a-link {
-  display: inline-block;
-  border-bottom: 1px solid $nos-light-green;
-  font-weight: 500;
-  color: $charcoal;
-  text-decoration: none;
-  line-height: 1.4;
-  clear: both;
-  position: relative;
-
-  @media (max-width: 700px) {
-    text-align: center;
-  }
-
-  &:hover {
-    border-bottom: none;
-  }
-}
