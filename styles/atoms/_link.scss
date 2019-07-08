@@ -31,4 +31,9 @@
   &:hover {
     border-bottom: none;
   }
+
+  &.-clear::before {
+    content: '';
+    display: block;
+  }
 }
