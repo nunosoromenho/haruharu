@@ -1,5 +1,6 @@
 {% from '../../../patterns/organisms/_banner_gallery.njk' import banner_gallery %}
 {% from '../../../patterns/atoms/_link.njk' import link %}
+{% from '../../../patterns/molecules/_check_block.njk' import check_block %}
 
 {% extends '../../../patterns/templates/_page.njk' %}
 
@@ -28,6 +29,8 @@
     <div class="a-loader"></div>
 
     {{ link (text = 'Saber mais sobre o Power Wi-Fi', href="#") }}
+
+    {{ check_block (type = 'checkbox', value = 'test', name = 'question-2', target = target) }}
 
   </div>
 

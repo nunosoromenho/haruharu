@@ -406,6 +406,7 @@ input.a-input {
 
 .m-check-block > label i {
   display: none;
+  margin: 0;
   font-size: 24px;
 }
 
