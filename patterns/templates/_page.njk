@@ -25,7 +25,7 @@
 
     {% block cssWebPart %}
       {% if project.title %}
-      <link rel="stylesheet" href="assets/css/{{ project.title.replace(r/\s/g, '') | lower }}.webpart.css">
+      <link rel="stylesheet" href="assets/css/{{ project.title.replace(r/-|\s/g, '') | lower }}.webpart.css">
       {% endif %}
     {% endblock %}
 
