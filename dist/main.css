@@ -1814,11 +1814,14 @@ p + p {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 980px) {
   .-contain {
     padding-right: calc((100vw - 680px) / 2) !important;
     padding-left: calc((100vw - 680px) / 2) !important;
   }
+}
+
+@media (max-width: 1300px) {
   .-reset-to-full {
     margin-left: calc((100vw - 680px) / 2 * -1) !important;
   }

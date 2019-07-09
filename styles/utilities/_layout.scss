@@ -47,7 +47,7 @@ p + p {
   padding-right: calc((100vw -  #{$nos-site-width}) / 2)!important;
   padding-left: calc((100vw - #{$nos-site-width}) / 2)!important;
 
-  @media (max-width: 1300px) {
+  @media (max-width: #{$nos-site-width + 20px}) {
     padding-right: calc((100vw - 680px) / 2)!important;
     padding-left: calc((100vw - 680px) / 2)!important;
   }
