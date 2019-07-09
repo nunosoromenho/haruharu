@@ -8,15 +8,15 @@
 
     <link rel="shortcut icon" href="//cdn.nos.pt/common/favicon_144.png">
 
-    {% block fontIcon %}
-      <link rel="stylesheet" href="https://cdn.nos.pt/common/fontsv6/fontcustom.css">
-    {% endblock %}
-
     {% block cssPlugins %}{% endblock %}
 
     {% block cssLegacy %}
       <link rel="stylesheet" href="https://www.nos.pt/_layouts/15/Armstrong/css/print.min.css" media="print" type="text/css">
       <link rel="stylesheet" href="https://www.nos.pt/_layouts/15/Armstrong/css/screen.min.css?v=15" media="screen,projection" type="text/css">
+    {% endblock %}
+
+    {% block fontIcon %}
+      <link rel="stylesheet" href="https://cdn.nos.pt/common/fontsv6/fontcustom.css">
     {% endblock %}
 
     {% block cssMain %}
