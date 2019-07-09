@@ -20,8 +20,15 @@
     {% endblock %}
 
     {% block cssMain %}
-      <link rel="stylesheet" href="assets/css/main.css">
+      <link rel="stylesheet" href="assets/css/global.min.css">
     {% endblock %}
+
+    {% block cssWebPart %}
+      {% if project.title %}
+      <link rel="stylesheet" href="assets/css/{{ project.title.replace(r/\s/g, '') | lower }}.webpart.css">
+      {% endif %}
+    {% endblock %}
+
 
   </head>
   <body{{ ' class="' + project.bodyclasses + '"' if project.bodyclasses }}>

@@ -368,6 +368,75 @@ input.a-input {
  *  Block
 **/
 /**
+ * @molecules check Block
+ * @section haruharu/styles/molecules/_radio_block.scss
+**/
+.m-check-block {
+  margin-bottom: 16px;
+}
+
+.m-check-block > label {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  min-height: 70px;
+  padding: 0 24px;
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.13);
+  cursor: pointer;
+}
+
+.m-check-block > label > span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #35363E;
+}
+
+.m-check-block > label .subtitle {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  color: #35363E;
+  line-height: 2;
+}
+
+.m-check-block > label i {
+  display: none;
+  font-size: 24px;
+}
+
+.m-check-block > input[type="radio"],
+.m-check-block > input[type="checkbox"] {
+  display: none;
+}
+
+.m-check-block > input[type="radio"]:checked + label,
+.m-check-block > input[type="checkbox"]:checked + label {
+  border: 2px solid #6ea514;
+  box-shadow: none;
+  color: #6ea514;
+}
+
+.m-check-block > input[type="radio"]:checked + label > span,
+.m-check-block > input[type="checkbox"]:checked + label > span {
+  color: #6ea514;
+}
+
+.m-check-block > input[type="radio"]:checked + label .subtitle,
+.m-check-block > input[type="checkbox"]:checked + label .subtitle {
+  color: #6ea514;
+}
+
+.m-check-block > input[type="radio"]:checked + label i,
+.m-check-block > input[type="checkbox"]:checked + label i {
+  display: block;
+}
+
+/**
  * @molecule Loader
  * @section haruharu/styles/molecules/_loader.scss
  *
@@ -508,70 +577,6 @@ input.a-input {
 
 .m-progress-block > label > span {
   color: #6ea514;
-}
-
-/**
- * @molecules Radio Block
- * @section haruharu/styles/molecules/_radio_block.scss
-**/
-.m-radio-block {
-  margin-bottom: 16px;
-}
-
-.m-radio-block > label {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  min-height: 70px;
-  padding: 0 24px;
-  background-color: #ffffff;
-  border: 2px solid transparent;
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.13);
-  cursor: pointer;
-}
-
-.m-radio-block > label > span {
-  font-size: 16px;
-  font-weight: bold;
-  color: #35363E;
-}
-
-.m-radio-block > label .subtitle {
-  display: block;
-  font-size: 12px;
-  font-weight: normal;
-  color: #35363E;
-  line-height: 2;
-}
-
-.m-radio-block > label i {
-  display: none;
-  font-size: 24px;
-}
-
-.m-radio-block > input[type="radio"] {
-  display: none;
-}
-
-.m-radio-block > input[type="radio"]:checked + label {
-  border: 2px solid #6ea514;
-  box-shadow: none;
-  color: #6ea514;
-}
-
-.m-radio-block > input[type="radio"]:checked + label > span {
-  color: #6ea514;
-}
-
-.m-radio-block > input[type="radio"]:checked + label .subtitle {
-  color: #6ea514;
-}
-
-.m-radio-block > input[type="radio"]:checked + label i {
-  display: block;
 }
 
 .o-site-header {
