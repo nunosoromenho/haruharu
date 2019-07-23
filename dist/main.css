@@ -17,6 +17,11 @@ html, body {
   padding: 0;
 }
 
+p {
+  font-size: inherit;
+  color: inherit;
+}
+
 .accordion > .title {
   padding: 16px;
   background-color: #f2f2f2;
@@ -77,6 +82,7 @@ html, body {
  *  .-light / .-dark
  *  .-small / .-medium / .-big
  *  .-has-icon
+ *  .-full
  *
  * @markup
  *  <button class="a-button -primary">Click me</button>
@@ -238,6 +244,13 @@ button.a-button.-clear::before {
   content: '';
   display: block;
   clear: both;
+}
+
+.a-button.-full,
+a.a-button.-full,
+button.a-button.-full {
+  display: block;
+  width: 100%;
 }
 
 .a-button:active,
@@ -435,6 +448,59 @@ input.a-input {
 .m-check-block > input[type="radio"]:checked + label i,
 .m-check-block > input[type="checkbox"]:checked + label i {
   display: block;
+}
+
+/**
+ * @molecules Checkbox
+ * @section haruharu/styles/molecules/_checkbox.scss
+**/
+.m-checkbox {
+  height: 24px;
+  line-height: 24px;
+}
+
+.m-checkbox .a-input {
+  display: none;
+}
+
+.m-checkbox .a-input:checked + .a-label::before, .m-checkbox .a-input:checked + .a-label::after {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"%3E%3Cdefs%3E%3CclipPath id="a"%3E%3Cpath d="M84.222,620.444l8-7.692-1.244-1.2-6.756,6.495-3.2-3.077-1.244,1.2ZM80,608H92a2,2,0,0,1,2,2v12a2,2,0,0,1-2,2H80a2,2,0,0,1-2-2V610A2,2,0,0,1,80,608Z" fill="none" clip-rule="evenodd"/%3E%3C/clipPath%3E%3CclipPath id="b"%3E%3Crect width="22" height="22" transform="translate(75 605)" fill="none"/%3E%3C/clipPath%3E%3CclipPath id="c"%3E%3Crect width="16" height="16" transform="translate(78 608)" fill="none"/%3E%3C/clipPath%3E%3C/defs%3E%3Cg transform="translate(-78 -608)"%3E%3Cg clip-path="url(%23a)"%3E%3Cg clip-path="url(%23b)"%3E%3Cg clip-path="url(%23c)"%3E%3Cg clip-path="url(%23c)"%3E%3Cg clip-path="url(%23c)"%3E%3Crect width="26" height="26" transform="translate(73 603)" fill="%236ea514"/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+.m-checkbox .a-label {
+  font-size: 12px;
+  color: #777777;
+  position: relative;
+  cursor: pointer;
+}
+
+.m-checkbox .a-label::before, .m-checkbox .a-label::after {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"%3E%3Cdefs%3E%3CclipPath id="a"%3E%3Cpath d="M79.75,555.75v12.5h12.5v-12.5ZM80,554H92a2,2,0,0,1,2,2v12a2,2,0,0,1-2,2H80a2,2,0,0,1-2-2V556A2,2,0,0,1,80,554Z" fill="none" clip-rule="evenodd"/%3E%3C/clipPath%3E%3CclipPath id="b"%3E%3Crect width="16" height="16" transform="translate(78 554)" fill="none"/%3E%3C/clipPath%3E%3C/defs%3E%3Cg transform="translate(-78 -554)"%3E%3Cg clip-path="url(%23a)"%3E%3Cg clip-path="url(%23b)"%3E%3Cg clip-path="url(%23b)"%3E%3Cg clip-path="url(%23b)"%3E%3Crect width="26" height="26" transform="translate(73 549)" fill="%23777"/%3E%3C/g%3E%3Cg clip-path="url(%23b)"%3E%3Cg clip-path="url(%23b)"%3E%3Crect width="26" height="26" transform="translate(73 549)" fill="%23777"/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+.m-checkbox.-icon-left label {
+  padding-left: 24px;
+}
+
+.m-checkbox.-icon-left label::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+
+.m-checkbox.-icon-right label {
+  padding-right: 24px;
+}
+
+.m-checkbox.-icon-right label::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: 0;
 }
 
 /**
@@ -930,76 +996,76 @@ body.overlay-open {
   background-color: #000000 !important;
 }
 
-.-color-light-blue, .-color-light-blue p {
+.-color-light-blue {
   color: #4bdbc5 !important;
 }
 
-.-color-dark-blue, .-color-dark-blue p {
+.-color-dark-blue {
   color: #414982 !important;
 }
 
-.-color-green, .-color-green p {
+.-color-green {
   color: #6ea514 !important;
 }
 
-.-color-light-green, .-color-light-green p {
+.-color-light-green {
   color: #bad80a !important;
 }
 
-.-color-pink, .-color-pink p {
+.-color-pink {
   color: #eb84cd !important;
 }
 
-.-color-yellow, .-color-yellow p {
+.-color-yellow {
   color: #fcd200 !important;
 }
 
-.-color-red, .-color-red p {
+.-color-red {
   color: #e04232 !important;
 }
 
-.-color-charcoal, .-color-charcoal p {
+.-color-charcoal {
   color: #1e1f27 !important;
 }
 
-.-color-midnight, .-color-midnight p {
+.-color-midnight {
   color: #35363E !important;
 }
 
-.-color-shadow, .-color-shadow p {
+.-color-shadow {
   color: #5b5c64 !important;
 }
 
-.-color-ash, .-color-ash p {
+.-color-ash {
   color: #74757d !important;
 }
 
-.-color-steel, .-color-steel p {
+.-color-steel {
   color: #94959d !important;
 }
 
-.-color-smoke, .-color-smoke p {
+.-color-smoke {
   color: #bbbcc4 !important;
 }
 
-.-color-pearl, .-color-pearl p {
+.-color-pearl {
   color: #dddee3 !important;
 }
 
-.-color-bone, .-color-bone p {
+.-color-bone {
   color: #efeff1 !important;
 }
 
-.-color-white, .-color-white p {
+.-color-white {
   color: #FFFFFF !important;
 }
 
-.-color-black, .-color-black p {
+.-color-black {
   color: #000000 !important;
 }
 
 /**
- * @utility layout
+ * @utility Layout
  * @section haruharu/utilities/_layout.scss
  *
  * @index
@@ -1051,7 +1117,8 @@ p + p {
 
 .-center-margin,
 .-center-1 {
-  margin: 0 auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .-center-text,
@@ -1200,6 +1267,50 @@ p + p {
 
 .-col12 {
   width: calc(100% - 16px);
+}
+
+.-m-0 {
+  margin: 0px !important;
+}
+
+.-m-8 {
+  margin: 8px !important;
+}
+
+.-m-16 {
+  margin: 16px !important;
+}
+
+.-m-24 {
+  margin: 24px !important;
+}
+
+.-m-32 {
+  margin: 32px !important;
+}
+
+.-m-40 {
+  margin: 40px !important;
+}
+
+.-m-48 {
+  margin: 48px !important;
+}
+
+.-m-56 {
+  margin: 56px !important;
+}
+
+.-m-64 {
+  margin: 64px !important;
+}
+
+.-m-72 {
+  margin: 72px !important;
+}
+
+.-m-80 {
+  margin: 80px !important;
 }
 
 .-mt-0 {
@@ -1488,6 +1599,50 @@ p + p {
   margin-right: 80px !important;
 }
 
+.-p-0 {
+  padding: 0px !important;
+}
+
+.-p-8 {
+  padding: 8px !important;
+}
+
+.-p-16 {
+  padding: 16px !important;
+}
+
+.-p-24 {
+  padding: 24px !important;
+}
+
+.-p-32 {
+  padding: 32px !important;
+}
+
+.-p-40 {
+  padding: 40px !important;
+}
+
+.-p-48 {
+  padding: 48px !important;
+}
+
+.-p-56 {
+  padding: 56px !important;
+}
+
+.-p-64 {
+  padding: 64px !important;
+}
+
+.-p-72 {
+  padding: 72px !important;
+}
+
+.-p-80 {
+  padding: 80px !important;
+}
+
 .-pt-0 {
   padding-top: 0px !important;
 }
@@ -1772,6 +1927,173 @@ p + p {
 .-px-80 {
   padding-left: 80px !important;
   padding-right: 80px !important;
+}
+
+/**
+ * @utility Typography
+ * @section haruharu/utilities/_typography.scss
+ *
+ * @index
+ *  Size
+**/
+.-font-10 {
+  font-size: 10px;
+}
+
+.-font-12 {
+  font-size: 12px;
+}
+
+.-font-14 {
+  font-size: 14px;
+}
+
+.-font-16 {
+  font-size: 16px;
+}
+
+.-font-18 {
+  font-size: 18px;
+}
+
+.-font-20 {
+  font-size: 20px;
+}
+
+.-font-22 {
+  font-size: 22px;
+}
+
+.-font-24 {
+  font-size: 24px;
+}
+
+.-font-26 {
+  font-size: 26px;
+}
+
+.-font-28 {
+  font-size: 28px;
+}
+
+.-font-30 {
+  font-size: 30px;
+}
+
+.-font-32 {
+  font-size: 32px;
+}
+
+.-font-34 {
+  font-size: 34px;
+}
+
+.-font-36 {
+  font-size: 36px;
+}
+
+.-font-38 {
+  font-size: 38px;
+}
+
+.-font-40 {
+  font-size: 40px;
+}
+
+.-font-42 {
+  font-size: 42px;
+}
+
+.-font-44 {
+  font-size: 44px;
+}
+
+.-font-46 {
+  font-size: 46px;
+}
+
+.-font-48 {
+  font-size: 48px;
+}
+
+.-m-font-10 {
+  font-size: 10px;
+}
+
+.-m-font-12 {
+  font-size: 12px;
+}
+
+.-m-font-14 {
+  font-size: 14px;
+}
+
+.-m-font-16 {
+  font-size: 16px;
+}
+
+.-m-font-18 {
+  font-size: 18px;
+}
+
+.-m-font-20 {
+  font-size: 20px;
+}
+
+.-m-font-22 {
+  font-size: 22px;
+}
+
+.-m-font-24 {
+  font-size: 24px;
+}
+
+.-m-font-26 {
+  font-size: 26px;
+}
+
+.-m-font-28 {
+  font-size: 28px;
+}
+
+.-m-font-30 {
+  font-size: 30px;
+}
+
+.-m-font-32 {
+  font-size: 32px;
+}
+
+.-m-font-34 {
+  font-size: 34px;
+}
+
+.-m-font-36 {
+  font-size: 36px;
+}
+
+.-m-font-38 {
+  font-size: 38px;
+}
+
+.-m-font-40 {
+  font-size: 40px;
+}
+
+.-m-font-42 {
+  font-size: 42px;
+}
+
+.-m-font-44 {
+  font-size: 44px;
+}
+
+.-m-font-46 {
+  font-size: 46px;
+}
+
+.-m-font-48 {
+  font-size: 48px;
 }
 
 @media (max-width: 700px) {

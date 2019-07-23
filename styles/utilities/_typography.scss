@@ -1,0 +1,26 @@
+/**
+ * @utility Typography
+ * @section haruharu/utilities/_typography.scss
+ *
+ * @index
+ *  Size
+**/
+
+$i: 10;
+$offset: 2;
+
+@while $i <= 48 {
+  .-font-#{$i} {
+    font-size: #{$i}px;
+  }
+  $i: $i + $offset;
+}
+
+$i: 10;
+
+@while $i <= 48 {
+  .-m-font-#{$i} {
+    font-size: #{$i}px;
+  }
+  $i: $i + $offset;
+}

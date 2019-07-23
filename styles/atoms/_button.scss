@@ -7,6 +7,7 @@
  *  .-light / .-dark
  *  .-small / .-medium / .-big
  *  .-has-icon
+ *  .-full
  *
  * @markup
  *  <button class="a-button -primary">Click me</button>
@@ -157,6 +158,11 @@ button.a-button {
     content: '';
     display: block;
     clear: both;
+  }
+
+  &.-full {
+    display: block;
+    width: 100%;
   }
 
   // Button States

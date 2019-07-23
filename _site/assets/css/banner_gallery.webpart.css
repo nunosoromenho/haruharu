@@ -13,6 +13,7 @@
  *  .-light / .-dark
  *  .-small / .-medium / .-big
  *  .-has-icon
+ *  .-full
  *
  * @markup
  *  <button class="a-button -primary">Click me</button>
@@ -174,6 +175,13 @@ button.a-button.-clear::before {
   content: '';
   display: block;
   clear: both;
+}
+
+.a-button.-full,
+a.a-button.-full,
+button.a-button.-full {
+  display: block;
+  width: 100%;
 }
 
 .a-button:active,

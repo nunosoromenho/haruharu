@@ -1,3 +1,3 @@
-{% macro label (text='', inputId='', customClasses='') %}
-  <label{{ ' for="' + inputId + '"' if inputId }} class="a-label{{ ' ' + customClasses if customClasses }}">{{ text }}</label>
+{% macro label (text='', for='', customClasses='') %}
+  <label{{ ' for="' + for + '"' if for }} class="a-label{{ ' ' + customClasses if customClasses }}">{{ text }}</label>
 {% endmacro %}

@@ -1,5 +1,5 @@
 /**
- * @utility layout
+ * @utility Layout
  * @section haruharu/utilities/_layout.scss
  *
  * @index
@@ -86,7 +86,8 @@ p + p {
 
 .-center-margin,
 .-center-1 {
-  margin: 0 auto!important;
+  margin-left: auto!important;
+  margin-right: auto!important;
 }
 
 .-center-text,
@@ -199,6 +200,7 @@ p + p {
  }
 }
 
+@include boxModelHelperClasses('.-m-', 'margin');
 @include boxModelHelperClasses('.-mt-', 'margin-top');
 @include boxModelHelperClasses('.-mr-', 'margin-right');
 @include boxModelHelperClasses('.-mb-', 'margin-bottom');
@@ -222,6 +224,7 @@ p + p {
   }
 }
 
+@include boxModelHelperClasses('.-p-', 'padding');
 @include boxModelHelperClasses('.-pt-', 'padding-top');
 @include boxModelHelperClasses('.-pr-', 'padding-right');
 @include boxModelHelperClasses('.-pb-', 'padding-bottom');

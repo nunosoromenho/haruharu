@@ -1,0 +1,34 @@
+{#
+ * @atom Checkbox
+ * @section haruharu/patterns/atoms/_checkbox.njk
+ *
+ * @markup
+ *  {{ checkbox ( text = 'Concordo com os termos e condições' ) }}
+ *
+ * @properties
+ *  autofocus: boolean
+ *  class: string
+ *  data: object — { data_key: value }
+ *  disabled: boolean
+ *  form: string
+ *  icon: string — left | right
+ *  id: string
+ *  name: string
+ *  required: boolean
+ *  style: string
+ *  tabindex: string
+ *  text: string
+ *  value: string
+#}
+
+{% from '../atoms/_input.njk' import input %}
+{% from '../atoms/_label.njk' import label %}
+
+{% macro checkbox (autofocus = '', class = '', data = {}, disabled = false, form = '', icon = 'left', id = '', name = '', required = false, style = '', tabindex = '', text = '', value = '') %}
+
+  <div class="m-checkbox{{ ' ' + class if class }}{{ ' -icon-' + icon if icon }}{{ ' -disable' if disabled }}{{ ' style="' + style + '"' if style }}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}>
+    {{ input (autofocus = autofocus, disabled = disabled, form = form, id = id, name = name, required = required, tabindex = '', type = 'checkbox', value = value) }}
+    {{ label (text = text, for = id) }}
+  </div>
+
+{% endmacro %}
