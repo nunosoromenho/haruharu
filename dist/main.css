@@ -1107,6 +1107,10 @@ p + p {
   margin-left: calc((100vw - 960px) / 2 * -1) !important;
 }
 
+.-group-text  {
+  display: inline-block;
+}
+
 .-align-right-text {
   text-align: right !important;
 }

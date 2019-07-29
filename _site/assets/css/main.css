@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Helpers
 **/
@@ -1373,6 +1374,10 @@ p + p {
 .-reset-to-full {
   width: 100vw !important;
   margin-left: calc((100vw - 960px) / 2 * -1) !important;
+}
+
+.-group-text  {
+  display: inline-block;
 }
 
 .-align-right-text {
