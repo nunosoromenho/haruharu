@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 70px;
+    height: 70px;
     padding: 0 24px;
     background-color: #ffffff;
     border: 2px solid transparent;
@@ -35,6 +35,12 @@
       display: none;
       margin: 0;
       font-size: 24px;
+    }
+  }
+
+  .icon2-check {
+    &::before {
+      content: "\fdf5";
     }
   }
 
