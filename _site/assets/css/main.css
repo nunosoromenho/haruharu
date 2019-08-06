@@ -2580,9 +2580,6 @@ p + p {
     padding-right: calc((100vw - 680px) / 2) !important;
     padding-left: calc((100vw - 680px) / 2) !important;
   }
-}
-
-@media (max-width: 1300px) {
   .-reset-to-full {
     margin-left: calc((100vw - 680px) / 2 * -1) !important;
   }

@@ -424,7 +424,7 @@ input.a-input {
 }
 
 .m-check-block .icon2-check::before {
-  content: "\fdf5";
+  content: "\fb99";
 }
 
 .m-check-block > input[type="radio"],
@@ -2150,9 +2150,6 @@ p + p {
     padding-right: calc((100vw - 680px) / 2) !important;
     padding-left: calc((100vw - 680px) / 2) !important;
   }
-}
-
-@media (max-width: 1300px) {
   .-reset-to-full {
     margin-left: calc((100vw - 680px) / 2 * -1) !important;
   }

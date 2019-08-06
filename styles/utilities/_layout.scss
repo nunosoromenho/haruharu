@@ -62,7 +62,7 @@ p + p {
   width: 100vw!important;
   margin-left: calc((100vw - #{$nos-site-width}) / 2 * -1)!important;
 
-  @media (max-width: 1300px) {
+  @media (max-width: #{$nos-site-width + 20px}) {
     margin-left: calc((100vw - 680px) / 2 * -1)!important;
   }
 
