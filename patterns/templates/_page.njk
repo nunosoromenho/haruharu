@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ project.lang if project.lang else 'pt' }}" class="{{ ['theme_green', 'theme_lightGreen', 'theme_blue', 'theme_yellow', 'theme_pink'] | random }}{{ ' ' + project.htmlclasses if project.htmlclasses }}">
+<html lang="{{ project.lang if project.lang else 'pt' }}" class="{{ ['theme_green', 'theme_lightGreen', 'theme_blue', 'theme_yellow', 'theme_pink'] | random }}{{ ' ' + project.htmlclasses if project.htmlclasses }}"{{ ' style="' + project.htmlstyles + '"' if project.htmlstyles }}>
   <head>
     <meta charset="{{ project.charset if project.charset else 'utf-8' }}">
     <meta name="viewport" content="{{ project.viewport if project.viewport else 'width=device-width, initial-scale=1' }}">
@@ -31,7 +31,7 @@
 
 
   </head>
-  <body{{ ' class="' + project.bodyclasses + '"' if project.bodyclasses }}>
+  <body{{ ' class="' + project.bodyclasses + '"' if project.bodyclasses }}{{ ' style="' + project.bodystyles + '"' if project.bodystyles }}>
 
     <div class="o-site">
 
@@ -39,7 +39,7 @@
         {% include '../organisms/_header.njk' %}
       {% endblock %}
 
-      <div class="o-site-main{{ ' ' + project.mainClasses if project.mainClasses }} -contain">
+      <div class="o-site-main{{ ' ' + project.mainClasses if project.mainClasses }} -contain"{{ ' style="' + project.mainstyles + '"' if project.mainstyles }}>
         {% block main %}{% endblock %}
       </div>
 
