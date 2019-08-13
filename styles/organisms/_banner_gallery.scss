@@ -136,16 +136,28 @@
   &.-position-left {
     right: auto;
     left: calc((100% - 960px) / 2);
+
+    @media (max-width: 980px) {
+      left: calc((100% - 740px) / 2);
+    }
   }
 
   &.-position-center {
     right: auto;
     left: calc((100% - 960px) / 2 + 240px);
+
+    @media (max-width: 980px) {
+      left: calc((100% - 740px) / 2 + 240px);
+    }
   }
 
   &.-position-right {
     right: calc((100% - 960px) / 2);
     left: auto;
+
+    @media (max-width: 980px) {
+      right: calc((100% - 740px) / 2);
+    }
   }
 
   &.-align-left {
@@ -281,8 +293,8 @@
   left: 50%;
   transform: translateX(-50%);
 
-  @media (max-width: 960px) {
-    width: 700px;
+  @media (max-width: 980px) {
+    width: 740px;
   }
 
   @media (max-width: 768px) {

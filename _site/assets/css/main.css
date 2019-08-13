@@ -570,14 +570,32 @@ input.a-input {
   left: calc((100% - 960px) / 2);
 }
 
+@media (max-width: 980px) {
+  .m-slide-info.-position-left {
+    left: calc((100% - 740px) / 2);
+  }
+}
+
 .m-slide-info.-position-center {
   right: auto;
   left: calc((100% - 960px) / 2 + 240px);
 }
 
+@media (max-width: 980px) {
+  .m-slide-info.-position-center {
+    left: calc((100% - 740px) / 2 + 240px);
+  }
+}
+
 .m-slide-info.-position-right {
   right: calc((100% - 960px) / 2);
   left: auto;
+}
+
+@media (max-width: 980px) {
+  .m-slide-info.-position-right {
+    right: calc((100% - 740px) / 2);
+  }
 }
 
 .m-slide-info.-align-left {
@@ -718,9 +736,9 @@ input.a-input {
       transform: translateX(-50%);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 980px) {
   .tns-nav {
-    width: 700px;
+    width: 740px;
   }
 }
 
