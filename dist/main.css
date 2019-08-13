@@ -290,23 +290,20 @@ button.a-button.-full {
 a.a-button:active,
 button.a-button:active {
   outline: 0;
-  -ms-transform: translate(1px);
-      transform: translate(1px);
+  transform: translate(1px);
 }
 
 .a-button:hover .a-text,
 a.a-button:hover .a-text,
 button.a-button:hover .a-text {
-  -ms-transform: translateX(-5px);
-      transform: translateX(-5px);
+  transform: translateX(-5px);
 }
 
 .a-button:hover .a-icon,
 a.a-button:hover .a-icon,
 button.a-button:hover .a-icon {
   opacity: 1;
-  -ms-transform: translateX(-5px) translateY(-50%);
-      transform: translateX(-5px) translateY(-50%);
+  transform: translateX(-5px) translateY(-50%);
 }
 
 /**
@@ -843,8 +840,7 @@ input.a-input {
   color: #1a1a1a;
   line-height: 1.57;
   text-decoration: none;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .overlay {
@@ -862,14 +858,12 @@ input.a-input {
   top: 0;
   left: 0;
   z-index: 1;
-  -ms-transform: translateY(100%);
-      transform: translateY(100%);
+  transform: translateY(100%);
   transition: .6s ease;
 }
 
 .overlay.-open {
-  -ms-transform: translateY(0);
-      transform: translateY(0);
+  transform: translateY(0);
 }
 
 .modal {

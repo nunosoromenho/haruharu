@@ -31,7 +31,7 @@
         <div class="m-slide-info m-editable-html{{ ' -position-' + slide.position if slide.position }}{{ ' -align-' + slide.align if slide.align }}">
 
           {% if slide.logo %}
-            <img src="{{ slide.logo }}" alt="{{ slide.logoAlt }}" class="a-image">
+            <img src="{{ slide.logo }}" alt="{{ slide.logoAlt }}" class="a-image -hide-mobile">
           {% endif %}
 
           {% if slide.pretitle %}

@@ -323,23 +323,20 @@ button.a-button.-full {
 a.a-button:active,
 button.a-button:active {
   outline: 0;
-  -ms-transform: translate(1px);
-      transform: translate(1px);
+  transform: translate(1px);
 }
 
 .a-button:hover .a-text,
 a.a-button:hover .a-text,
 button.a-button:hover .a-text {
-  -ms-transform: translateX(-5px);
-      transform: translateX(-5px);
+  transform: translateX(-5px);
 }
 
 .a-button:hover .a-icon,
 a.a-button:hover .a-icon,
 button.a-button:hover .a-icon {
   opacity: 1;
-  -ms-transform: translateX(-5px) translateY(-50%);
-      transform: translateX(-5px) translateY(-50%);
+  transform: translateX(-5px) translateY(-50%);
 }
 
 /**
@@ -487,8 +484,7 @@ input.a-input {
   position: absolute;
   top: 0;
   left: 50%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 @media (max-width: 768px) {
@@ -505,8 +501,7 @@ input.a-input {
   position: absolute;
   top: 0;
   left: 50%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .m-slide-info {
@@ -708,8 +703,7 @@ input.a-input {
   opacity: 0;
   position: absolute;
   top: 50%;
-  -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+  transform: translateY(-50%);
   transition: opacity .4s ease;
 }
 
@@ -732,8 +726,7 @@ input.a-input {
   position: absolute;
   bottom: 0;
   left: 50%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 @media (max-width: 980px) {
@@ -788,8 +781,7 @@ input.a-input {
   padding: 0;
   background: #FFF;
   border: none;
-  -ms-transform: translateX(-100%);
-      transform: translateX(-100%);
+  transform: translateX(-100%);
   position: absolute;
   top: 16px;
   left: 0;
@@ -954,8 +946,7 @@ input.a-input {
   color: #1a1a1a;
   line-height: 1.57;
   text-decoration: none;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .gallery > .slide {
@@ -991,8 +982,7 @@ input.a-input {
   position: absolute;
   top: 0;
   left: 50%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  transform: translateX(-50%);
   z-index: 1;
 }
 
@@ -1075,8 +1065,7 @@ input.a-input {
   position: absolute;
   top: 0;
   left: 50%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 @media (max-width: 1360px) {
@@ -1163,8 +1152,7 @@ input.a-input {
   position: absolute;
   bottom: 0;
   left: 50%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 @media (max-width: 960px) {
@@ -1219,8 +1207,7 @@ input.a-input {
   padding: 0;
   background: #FFF;
   border: none;
-  -ms-transform: translateX(-100%);
-      transform: translateX(-100%);
+  transform: translateX(-100%);
   position: absolute;
   top: 16px;
   left: 0;
@@ -1282,14 +1269,12 @@ input.a-input {
   top: 0;
   left: 0;
   z-index: 1;
-  -ms-transform: translateY(100%);
-      transform: translateY(100%);
+  transform: translateY(100%);
   transition: .6s ease;
 }
 
 .overlay.-open {
-  -ms-transform: translateY(0);
-      transform: translateY(0);
+  transform: translateY(0);
 }
 
 .modal {
