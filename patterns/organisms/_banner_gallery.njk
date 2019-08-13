@@ -28,10 +28,14 @@
     {% for slide in slides %}
       <div class="m-slide{{ ' -bg-' + slide.background if slide.background }}">
 
-        <div class="m-slide-info m-editable-html{{ ' -' + slide.position if slide.position }}">
+        <div class="m-slide-info m-editable-html{{ ' -position-' + slide.position if slide.position }}{{ ' -align-' + slide.align if slide.align }}">
+
+          {% if slide.logo %}
+            <img src="{{ slide.logo }}" alt="{{ slide.logoAlt }}" class="a-image">
+          {% endif %}
 
           {% if slide.pretitle %}
-            <h3 class="a-heading{{ ' -color-' + slide.titlpretitleecolor if slide.pretitle }}">{{ slide.pretitle }}</h3>
+            <h3 class="a-heading{{ ' -color-' + slide.pretitlecolor if slide.pretitlecolor }}">{{ slide.pretitle }}</h3>
           {% endif %}
 
           {% if slide.title %}
@@ -39,9 +43,9 @@
           {% endif %}
 
           {% if slide.text %}
-            <div class="a-text{{ ' -color-' + slide.textcolor if slide.textcolor }}">
+            <p class="a-text{{ ' -color-' + slide.textcolor if slide.textcolor }}">
               {{ slide.text }}
-            </div>
+            </p>
           {% endif %}
 
           {% if slide.button %}

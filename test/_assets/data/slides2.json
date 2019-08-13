@@ -6,7 +6,6 @@
     "logoAlt": "NOS Studios",
     "text": "Novo canal exclusivo NOS",
     "position": "left",
-    "align": "left",
     "button": {
       "text": "Saber mais",
       "srcset": "https://www.nos.pt/particulares/televisao/canais/exclusivos/Pages/nos-studios.aspx?hp",
@@ -14,7 +13,6 @@
     },
     "background": "yellow",
     "titlecolor": "pink",
-    "pretitlecolor": "pink",
     "textcolor": "",
     "image": {
       "alt": "",
@@ -26,15 +24,15 @@
           "srcset": "assets/images/Desktop@2x.png"
         },
         {
-          "media": "(min-width: 769px)",
+          "media": "(min-width: 768px)",
           "srcset": "assets/images/Desktop.png"
         },
         {
-          "media": "(max-width: 768px), (min-device-pixel-ratio: 2.0)",
+          "media": "(max-width: 767px), (min-device-pixel-ratio: 2.0)",
           "srcset": "assets/images/Mobile@2x.png"
         },
         {
-          "media": "(max-width: 768px)",
+          "media": "(max-width: 767px)",
           "srcset": "assets/images/Mobile.png"
         }
       ]
