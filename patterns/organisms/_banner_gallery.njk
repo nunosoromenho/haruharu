@@ -22,43 +22,57 @@
 {% from '../atoms/_button_link.njk' import button_link %}
 
 {% macro banner_gallery (class = '', data = {}, id = '', styles = '', slides = [], tabindex = '', options = {}) %}
+  <div class="o-banner-gallery-wrapper">
 
-  <div class="o-banner-gallery{{ ' ' + class if class }}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}{{ ' id="' + id + '"' if id }}{{ ' styles="' + styles + '"' if styles }}{{ ' tabindex="' + tabindex + '"' if tabindex }}>
+    <div class="o-banner-gallery{{ ' ' + class if class }}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}{{ ' id="' + id + '"' if id }}{{ ' styles="' + styles + '"' if styles }}{{ ' tabindex="' + tabindex + '"' if tabindex }}>
 
-    {% for slide in slides %}
-      <div class="m-slide{{ ' -bg-' + slide.background if slide.background }}">
+      {% for slide in slides %}
+        <div class="m-slide{{ ' -bg-' + slide.background if slide.background }}">
 
-        <div class="m-slide-info m-editable-html{{ ' -position-' + slide.position if slide.position }}{{ ' -align-' + slide.align if slide.align }}">
+          <div class="m-slide-info m-editable-html{{ ' -position-' + slide.position if slide.position }}{{ ' -align-' + slide.align if slide.align }}">
 
-          {% if slide.logo %}
-            <img src="{{ slide.logo }}" alt="{{ slide.logoAlt }}" class="a-image -hide-mobile">
-          {% endif %}
+            {% if slide.logo %}
+              <img src="{{ slide.logo }}" alt="{{ slide.logoAlt }}" class="a-image -hide-mobile">
+            {% endif %}
 
-          {% if slide.pretitle %}
-            <h3 class="a-heading{{ ' -color-' + slide.pretitlecolor if slide.pretitlecolor }}">{{ slide.pretitle }}</h3>
-          {% endif %}
+            {% if slide.pretitle %}
+              <h3 class="a-heading{{ ' -color-' + slide.pretitlecolor if slide.pretitlecolor }}">{{ slide.pretitle }}</h3>
+            {% endif %}
 
-          {% if slide.title %}
-            <h2 class="a-heading{{ ' -color-' + slide.titlecolor if slide.titlecolor }}">{{ slide.title }}</h2>
-          {% endif %}
+            {% if slide.title %}
+              <h2 class="a-heading{{ ' -color-' + slide.titlecolor if slide.titlecolor }}">{{ slide.title }}</h2>
+            {% endif %}
 
-          {% if slide.text %}
-            <p class="a-text{{ ' -color-' + slide.textcolor if slide.textcolor }}">
-              {{ slide.text }}
-            </p>
-          {% endif %}
+            {% if slide.text %}
+              <p class="a-text{{ ' -color-' + slide.textcolor if slide.textcolor }}">
+                {{ slide.text }}
+              </p>
+            {% endif %}
 
-          {% if slide.button %}
-            {{ button_link (arrow = 'right', text = slide.button.text, href = slide.button.url, state = slide.button.state) }}
-          {% endif %}
+            {% if slide.button %}
+              {{ button_link (arrow = 'right', text = slide.button.text, href = slide.button.url, state = slide.button.state) }}
+            {% endif %}
+          </div>
+
+          {{ picture (sources = slide.image.sources, src = slide.image.default, srcNS = slide.image.noscript, alt = slide.image.alt) }}
+
         </div>
+      {% else %}
+        <p>Não existem slides.</p>
+      {% endfor %}
 
-        {{ picture (sources = slide.image.sources, src = slide.image.default, srcNS = slide.image.noscript, alt = slide.image.alt) }}
+    </div>
 
-      </div>
-    {% else %}
-      <p>Não existem slides.</p>
-    {% endfor %}
+    <div class="tns-controls">
+      <button class="prev">Prev</button>
+      <button class="next">Next</button>
+    </div>
+
+    <div class="tns-nav" aria-label="Carousel Pagination">
+      <button data-nav="0" aria-controls="tns1" style="" aria-label="Carousel Page 1 (Current Slide)"><span></span></button>
+      <button data-nav="1" tabindex="-1" aria-controls="tns1" style="" aria-label="Carousel Page 2"><span></span></button>
+      <button data-nav="2" tabindex="-1" aria-controls="tns1" style="" aria-label="Carousel Page 3"><span></span></button>
+    </div>
 
   </div>
 

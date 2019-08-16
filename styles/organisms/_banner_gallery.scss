@@ -232,7 +232,7 @@
 
 // TinySlider
 
- .tns-outer {
+.o-banner-gallery-wrapper {
   position: relative;
 
   > button[data-action] {
@@ -243,10 +243,15 @@
     .tns-controls button {
       opacity: 0.8;
     }
+
+    .tns-nav .tns-nav-active span {
+      animation-play-state: paused;
+    }
   }
 }
 
 .tns-controls {
+  margin: 0;
 
   @media (max-width: 768px) {
     display: none;
@@ -255,6 +260,7 @@
   button {
     width: 80px;
     height: 80px;
+    margin: 0;
     padding: 0;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -275,13 +281,13 @@
     }
   }
 
-  button[data-controls="prev"] {
-    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="84"%3E%3Cpath d="M24.03 63.925l2.828-2.828L7.657 41.893l19.308-19.308-2.828-2.828L2 41.893l22.03 22.03zm44.897-4.107l17.925-17.925-21.136-21.136-2.828 2.828 18.308 18.308L66.1 57l2.828 2.828z" fill="%23efeff1" fill-rule="nonzero"/%3E%3C/svg%3E');
+  .prev {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='84'%3E%3Cpath d='M24.03 63.925l2.828-2.828L7.657 41.893l19.308-19.308-2.828-2.828L2 41.893l22.03 22.03zm44.897-4.107l17.925-17.925-21.136-21.136-2.828 2.828 18.308 18.308L66.1 57l2.828 2.828z' fill='%23efeff1' fill-rule='nonzero'/%3E%3C/svg%3E");
     left: 0;
   }
 
-  button[data-controls="next"] {
-    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="84"%3E%3Cpath d="M7.822 63.925l-2.828-2.828 19.203-19.203L4.888 22.586l2.828-2.828 22.136 22.136-22.03 22.03zm-44.897-4.107L-55 41.893l21.136-21.136 2.828 2.828-18.308 18.308L-34.247 57l-2.828 2.828z" fill="%23efeff1" fill-rule="nonzero"/%3E%3C/svg%3E');
+  .next {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='84'%3E%3Cpath d='M7.822 63.925l-2.828-2.828 19.203-19.203L4.888 22.586l2.828-2.828 22.136 22.136-22.03 22.03zm-44.897-4.107L-55 41.893l21.136-21.136 2.828 2.828-18.308 18.308L-34.247 57l-2.828 2.828z' fill='%23efeff1' fill-rule='nonzero'/%3E%3C/svg%3E");
     right: 0;
   }
 }
@@ -304,10 +310,10 @@
 
   button {
     width: calc(100% / 12);
-    height: 36px;
-    margin-right: 16px;
-    padding: 16px 0;
-    background: none;
+    height: 4px;
+    margin: 16px 16px 16px 0;
+    padding: 0;
+    background: rgba(255, 255, 255, .4);
     border: none;
     position: relative;
     overflow: hidden;
@@ -316,45 +322,30 @@
       width: calc(100% / 6);
     }
 
-    &::before {
+    span {
       content: '';
       display: block;
-      width: 100%;
-      height: 4px;
-      padding: 0;
-      background: rgba(255, 255, 255, .4);
-      border: none;
-      position: absolute;
-      top: 16px;
-      left: 0;
-      z-index: 0;
-    }
-
-    &::after {
-      content: '';
-      display: block;
-      width: 100%;
+      width: 0;
       height: 4px;
       padding: 0;
       background: #FFF;
       border: none;
-      transform: translateX(-100%);
       position: absolute;
-      top: 16px;
+      top: 0;
       left: 0;
       z-index: 1;
     }
 
-    &.tns-nav-active::after {
+    &.tns-nav-active span {
       animation: 5s ease-out 0s 1 forwards loadButtonAnim;
     }
 
     @keyframes loadButtonAnim {
       from {
-        transform: translateX(-100%);
+        width: 0;
       }
       to {
-        transform: translateX(0);
+        width: 100%;
       }
     }
 
