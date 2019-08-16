@@ -22,7 +22,7 @@
 {% from '../atoms/_button_link.njk' import button_link %}
 
 {% macro banner_gallery (class = '', data = {}, id = '', styles = '', slides = [], tabindex = '', options = {}) %}
-  <div class="o-banner-gallery-wrapper">
+  <div class="o-banner-gallery-wrapper" data-slides="{{ slides.length }}">
 
     <div class="o-banner-gallery{{ ' ' + class if class }}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}{{ ' id="' + id + '"' if id }}{{ ' styles="' + styles + '"' if styles }}{{ ' tabindex="' + tabindex + '"' if tabindex }}>
 
@@ -69,9 +69,9 @@
     </div>
 
     <div class="tns-nav" aria-label="Carousel Pagination">
-      <button data-nav="0" aria-controls="tns1" style="" aria-label="Carousel Page 1 (Current Slide)"><span></span></button>
-      <button data-nav="1" tabindex="-1" aria-controls="tns1" style="" aria-label="Carousel Page 2"><span></span></button>
-      <button data-nav="2" tabindex="-1" aria-controls="tns1" style="" aria-label="Carousel Page 3"><span></span></button>
+      {% for slide in slides %}
+        <button><span></span></button>
+      {% endfor %}
     </div>
 
   </div>

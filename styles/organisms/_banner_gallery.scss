@@ -257,6 +257,10 @@
     display: none;
   }
 
+  .o-banner-gallery-wrapper[data-slides="1"] & {
+    display: none;
+  }
+
   button {
     width: 80px;
     height: 80px;

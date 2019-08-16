@@ -1,10 +1,17 @@
-var banners = document.querySelectorAll('.o-banner-gallery');
+var forEach = function (array, callback, scope) {
+  for (var i = 0; i < array.length; i++) {
+    callback.call(scope, i, array[i]);
+  }
+};
 
-for (var i = 0; i < banners.length; ++i) {
-  var wrapperElem = banners[i].parentNode;
+var banners = document.querySelectorAll('.o-banner-gallery-wrapper');
+
+forEach(banners, function (index, value) {
+  var gallery = banners[index].querySelector('.o-banner-gallery');
+  var delay;
 
   var slider = tns({
-    container: banners[i],
+    container: gallery,
     items: 1,
     slideBy: 'page',
     autoplay: true,
@@ -15,47 +22,42 @@ for (var i = 0; i < banners.length; ++i) {
     animateIn: 'jello',
     animateOut: 'rollOut',
     navPosition: 'bottom',
-    navContainer: wrapperElem.querySelector('.tns-nav'),
-    autoplayButtonOutput: false,
+    navContainer: banners[index].querySelector('.tns-nav'),
     controls: false,
-    controlsContainer: false
+    autoplayButtonOutput: false
   });
 
-  var time;
-  var timeout;
-  var delay;
+  var wrapperELem = slider.getInfo().container.parentNode.parentNode.parentNode.parentNode;
 
-  var mouseOn = function () {
+  wrapperELem.onmouseenter  = function () {
     slider.pause();
-    time = slider.getInfo().navContainer.querySelector('.tns-nav-active span').offsetWidth * 5000 / slider.getInfo().navContainer.querySelector('.tns-nav-active').offsetWidth;
-    timeout = 5000 - time;
     clearTimeout(delay);
   };
 
-  wrapperElem.onmouseenter = mouseOn;
-  wrapperElem.onmouseover = mouseOn;
-
-  wrapperElem.onmouseleave = function () {
+  wrapperELem.onmouseleave = function () {
+    var time;
+    var timeout;
     clearTimeout(delay);
+    time = slider.getInfo().navContainer.querySelector('.tns-nav-active span').offsetWidth * 5000 / slider.getInfo().navContainer.querySelector('.tns-nav-active').offsetWidth;
+    timeout = 5000 - time;
     delay = setTimeout(function () {
-      slider.pause();
       slider.goTo('next');
       slider.play();
       clearTimeout(delay);
     }, timeout);
   };
 
-  wrapperElem.querySelector('.prev').onclick = function (e) {
-    e.preventDefault();
+  wrapperELem.querySelector('.prev').addEventListener('click', function (event) {
+    event.preventDefault();
     clearTimeout(delay);
     slider.pause();
     slider.goTo('prev');
-  };
+  });
 
-  wrapperElem.querySelector('.next').onclick = function (e) {
-    e.preventDefault();
+  wrapperELem.querySelector('.next').addEventListener('click', function (event) {
+    event.preventDefault();
     clearTimeout(delay);
     slider.pause();
     slider.goTo('next');
-  };
-}
+  });
+});

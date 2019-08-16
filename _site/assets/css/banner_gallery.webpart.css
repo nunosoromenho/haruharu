@@ -276,6 +276,10 @@
   }
 }
 
+.o-banner-gallery-wrapper[data-slides="1"] .tns-controls {
+  display: none;
+}
+
 .tns-controls button {
   width: 80px;
   height: 80px;
