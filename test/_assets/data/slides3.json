@@ -10,12 +10,12 @@
     "button": {
       "text": "Saber mais",
       "srcset": "https://www.nos.pt/particulares/televisao/canais/exclusivos/Pages/nos-studios.aspx?hp",
-      "state": ["primary", "light", "medium"]
+      "state": ["primary", "dark", "medium"]
     },
     "background": "yellow",
     "titlecolor": "pink",
-    "pretitlecolor": "pink",
-    "textcolor": "",
+    "pretitlecolor": "white",
+    "textcolor": "white",
     "image": {
       "alt": "",
       "default": "assets/images/Desktop@2x.png",

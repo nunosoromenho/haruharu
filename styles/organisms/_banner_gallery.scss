@@ -190,6 +190,12 @@
     max-height: 80px;
   }
 
+  > h2,
+  > h3,
+  > .a-text {
+    align-self: stretch;
+  }
+
   > h2 {
     font-size: 50px;
     line-height: 1;

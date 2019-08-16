@@ -205,6 +205,13 @@
   max-height: 80px;
 }
 
+.m-slide-info > h2,
+.m-slide-info > h3,
+.m-slide-info > .a-text {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
 .m-slide-info > h2 {
   font-size: 50px;
   line-height: 1;
