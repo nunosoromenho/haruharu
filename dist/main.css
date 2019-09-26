@@ -1129,7 +1129,7 @@ body.overlay-open {
  *  Margin
  *  Padding
 **/
-.o-site * + * {
+.margin-top * + * {
   margin-top: 1rem;
 }
 

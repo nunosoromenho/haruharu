@@ -10,6 +10,7 @@
  *  data --> object { key: value }
  *  id --> string
  *  options --> object
+ *  size --> string
  *  slides --> array of objects [ {"title": "", "text": "", "position": "",
  *             "button": { "text": "", "url": "", "state": [] }, "background": "",
  *             "titlecolor": "", "textcolor": "", "image": { "alt": "", "default": "",
@@ -21,8 +22,8 @@
 {% from '../atoms/_picture.njk' import picture %}
 {% from '../atoms/_button_link.njk' import button_link %}
 
-{% macro banner_gallery (class = '', data = {}, id = '', styles = '', slides = [], tabindex = '', options = {}) %}
-  <div class="o-banner-gallery-wrapper" data-slides="{{ slides.length }}">
+{% macro banner_gallery (class = '', data = {}, id = '', options = {}, size = '', slides = [], styles = '', tabindex = '') %}
+  <div class="o-banner-gallery-wrapper{{ ' -size-' + size if size }}" data-slides="{{ slides.length }}">
 
     <div class="o-banner-gallery{{ ' ' + class if class }}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}{{ ' id="' + id + '"' if id }}{{ ' styles="' + styles + '"' if styles }}{{ ' tabindex="' + tabindex + '"' if tabindex }}>
 
