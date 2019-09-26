@@ -432,8 +432,6 @@ input.a-input {
  * @modifiers
  *  .-primary / .-secondary
  *  .-light / .-dark
- *  .-small / .-medium / .-big
- *  .-has-icon
  *
  * @markup
  *  <div class="o-banner-gallery">
@@ -445,12 +443,30 @@ input.a-input {
  *
  * @index
  *  Banner Gallery
+ *  Banner Size
  *  Slide
  *  Slide Info
  *  TinySlider
 **/
 .o-banner-gallery {
   position: relative;
+}
+
+.o-banner-gallery-wrapper.-size-small {
+  height: 250px;
+}
+
+.o-banner-gallery-wrapper.-size-small .m-slide,
+.o-banner-gallery-wrapper.-size-small .m-slide > .a-picture {
+  height: 250px;
+}
+
+.o-banner-gallery-wrapper.-size-small .m-slide-info > h2 {
+  font-size: 32px;
+}
+
+.o-banner-gallery-wrapper.-size-small .m-slide-info > .a-text {
+  font-size: 16px;
 }
 
 .m-slide {
@@ -624,6 +640,7 @@ input.a-input {
 .m-slide-info .a-image {
   max-width: 100px;
   max-height: 80px;
+  margin-bottom: 8px;
 }
 
 .m-slide-info > h2,
@@ -633,7 +650,14 @@ input.a-input {
       align-self: stretch;
 }
 
+.m-slide-info > h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 1;
+}
+
 .m-slide-info > h2 {
+  margin-bottom: 8px;
   font-size: 50px;
   line-height: 1;
 }
@@ -1684,7 +1708,7 @@ body.overlay-open {
  *  Margin
  *  Padding
 **/
-.o-site * + * {
+.margin-top * + * {
   margin-top: 1rem;
 }
 

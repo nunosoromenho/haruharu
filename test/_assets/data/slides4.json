@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Só dá grandes filmes",
+    "text": "Novo canal exclusivo NOS",
+    "position": "left",
+    "align": "left",
+    "button": {
+      "text": "Saber mais",
+      "srcset": "https://www.nos.pt/particulares/televisao/canais/exclusivos/Pages/nos-studios.aspx?hp",
+      "state": ["primary", "dark", "medium"]
+    },
+    "background": "yellow",
+    "titlecolor": "pink",
+    "pretitlecolor": "white",
+    "textcolor": "white",
+    "image": {
+      "alt": "",
+      "default": "assets/images/Desktop-small@2x.png",
+      "noscript": "assets/images/Desktop-small.png",
+      "sources": [
+        {
+          "media": "(min-width: 769px), (min-device-pixel-ratio: 2.0)",
+          "srcset": "assets/images/Desktop-small@2x.png"
+        },
+        {
+          "media": "(min-width: 769px)",
+          "srcset": "assets/images/Desktop-small.png"
+        },
+        {
+          "media": "(max-width: 768px), (min-device-pixel-ratio: 2.0)",
+          "srcset": "assets/images/Mobile@2x.png"
+        },
+        {
+          "media": "(max-width: 768px)",
+          "srcset": "assets/images/Mobile.png"
+        }
+      ]
+    }
+  }
+]

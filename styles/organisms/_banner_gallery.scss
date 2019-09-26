@@ -5,8 +5,6 @@
  * @modifiers
  *  .-primary / .-secondary
  *  .-light / .-dark
- *  .-small / .-medium / .-big
- *  .-has-icon
  *
  * @markup
  *  <div class="o-banner-gallery">
@@ -18,6 +16,7 @@
  *
  * @index
  *  Banner Gallery
+ *  Banner Size
  *  Slide
  *  Slide Info
  *  TinySlider
@@ -28,6 +27,33 @@
 
 .o-banner-gallery {
   position: relative;
+}
+
+// Banner Size
+
+.o-banner-gallery-wrapper {
+  &.-size-small {
+    height: 250px;
+
+    .m-slide,
+    .m-slide > .a-picture {
+      height: 250px;
+    }
+
+    .m-slide-info {
+      & > h3 {
+        font-size: 14px;
+      }
+
+      & > h2 {
+        font-size: 32px;
+      }
+
+      & > .a-text {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 // Slide
@@ -188,6 +214,7 @@
   .a-image {
     max-width: 100px;
     max-height: 80px;
+    margin-bottom: 8px;
   }
 
   > h2,
@@ -196,7 +223,14 @@
     align-self: stretch;
   }
 
+  > h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 1;
+  }
+
   > h2 {
+    margin-bottom: 8px;
     font-size: 50px;
     line-height: 1;
 
