@@ -452,21 +452,23 @@ input.a-input {
   position: relative;
 }
 
-.o-banner-gallery-wrapper.-size-small {
-  height: 250px;
-}
-
-.o-banner-gallery-wrapper.-size-small .m-slide,
-.o-banner-gallery-wrapper.-size-small .m-slide > .a-picture {
-  height: 250px;
-}
-
-.o-banner-gallery-wrapper.-size-small .m-slide-info > h2 {
-  font-size: 32px;
-}
-
-.o-banner-gallery-wrapper.-size-small .m-slide-info > .a-text {
-  font-size: 16px;
+@media (min-width: 768px) {
+  .o-banner-gallery-wrapper.-size-small {
+    height: 250px;
+  }
+  .o-banner-gallery-wrapper.-size-small .m-slide,
+  .o-banner-gallery-wrapper.-size-small .m-slide > .a-picture {
+    height: 250px;
+  }
+  .o-banner-gallery-wrapper.-size-small .m-slide-info > h3 {
+    font-size: 14px;
+  }
+  .o-banner-gallery-wrapper.-size-small .m-slide-info > h2 {
+    font-size: 32px;
+  }
+  .o-banner-gallery-wrapper.-size-small .m-slide-info > .a-text {
+    font-size: 16px;
+  }
 }
 
 .m-slide {

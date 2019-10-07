@@ -25,8 +25,8 @@
  *  value: string
 #}
 
-{% macro input (autocomplete = '', autofocus = false, class = '', data = {}, disabled = false, form = '', id = '', inputmode = '', list = '', name = '', placeholder = '', readonly = false, required = false, style = '', tabindex = '', type = '', value = '') %}
+{% macro input (autocomplete = '', autofocus = false, class = '', data = {}, disabled = false, form = '', id = '', inputmode = '', list = '', name = '', placeholder = '', readonly = false, required = false, style = '', tabindex = '', type = 'text', value = '') %}
 
-  <input{{ ' autocomplete="' + autocomplete + '"' if autocomplete }}{{ ' autofocus' + autofocus if autofocus }} class="a-input{{ ' ' + class if class }}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}{{ ' disabled' + disabled if disabled }}{{ ' form="' + form + '"' if form }}{{ ' id="' + id + '"' if id }}{{ ' inputmode="' + inputmode + '"' if inputmode }}{{ ' list="' + list + '"' if list }}{{ ' name="' + name + '"' if name }}{{ ' placeholder="' + placeholder + '"' if placeholder }}{{ ' readonly' + readonly if readonly }}{{ ' required' + required if required }}{{ ' style="' + style + '"' if style }}{{ ' tabindex="' + tabindex + '"' if tabindex }}{{ ' type="' + type + '"' if type }}{{ ' value="' + value + '"' if value }}>
+  <input{{ ' autocomplete="' + autocomplete + '"' if autocomplete }}{{ ' autofocus' + autofocus if autofocus }} class="a-input{{ ' ' + class if class }}"{% for key, value in data %} data-{{ key }}="{{ value }}"{% endfor %}{{ ' disabled' if disabled }}{{ ' form="' + form + '"' if form }}{{ ' id="' + id + '"' if id }}{{ ' inputmode="' + inputmode + '"' if inputmode }}{{ ' list="' + list + '"' if list }}{{ ' name="' + name + '"' if name }}{{ ' placeholder="' + placeholder + '"' if placeholder }}{{ ' readonly' + readonly if readonly }}{{ ' required' + required if required }}{{ ' style="' + style + '"' if style }}{{ ' tabindex="' + tabindex + '"' if tabindex }}{{ ' type="' + type + '"' if type }}{{ ' value="' + value + '"' if value }}>
 
 {% endmacro %}
