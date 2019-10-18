@@ -1,3 +1,4 @@
+{% from '../../../patterns/templates/_modal.njk' import modal %}
 {% from '../../../patterns/organisms/_banner_gallery.njk' import banner_gallery %}
 {% from '../../../patterns/atoms/_link.njk' import link %}
 {% from '../../../patterns/molecules/_check_block.njk' import check_block %}
@@ -12,6 +13,7 @@
 {% block cssMain %}
   <link rel="stylesheet" href="../../../dist/main.min.css">
   <link rel="stylesheet" href="assets/css/banner_gallery.webpart.css">
+  <link rel="stylesheet" href="assets/css/modal.webpart.css">
 {% endblock %}
 {% block cssWebPart %}{% endblock %}
 
@@ -32,10 +34,6 @@
 
     {{ banner_gallery (slides = slides4, size = 'small') }}
 
-    <br><br>
-
-    {{ banner_gallery (slides = slides3) }}
-
     <div class="a-loader"></div>
 
     {{ link (text = 'Saber mais sobre o Power Wi-Fi', href="#") }}
@@ -47,5 +45,7 @@
     {{ checkbox ( text = 'Concordo com os termos e condições', class = 'l-flex', name = 'consent', id = 'consent2', icon = 'right') }}
 
   </div>
+
+  {{ modal (modal = modal_cancel) }}
 
 {% endblock %}

@@ -1,0 +1,59 @@
+{#
+ * @template Modal
+ * @section haruharu/patterns/templates/_modal.njk
+ *
+ * @markup
+ *  {{ modal ( modal = modal_cancel ) }}
+ *
+ * @properties
+ *  modal --> object
+#}
+
+{% from '../atoms/_label.njk' import label %}
+{% from '../atoms/_input.njk' import input %}
+{% from '../atoms/_button_link.njk' import button_link %}
+
+{% macro modal (modal = {}) %}
+<section role="dialog" class="t-modal overlay-{{ modal.id }}{{ ' is-open' if modal.open }}">
+  <header class="modal-header">
+    <h2>{{ modal.title }}</h2>
+    {% if modal.close %}
+      <button class="a-icon-button close-modal">close</button>
+    {% endif %}
+  </header>
+  <div class="modal-body">
+
+    {% if modal.text %}
+      <p>{{ modal.text }}</p>
+    {% endif %}
+
+    {% if modal.form.show %}
+
+      <form class="o-modal-form">
+
+        {% if modal.form.text %}
+          <p>{{ modal.form.text }}</p>
+        {% endif %}
+
+        {% for item in modal.form.items %}
+          <div class="m-form-group">
+            {{ label (text = item.label.text, for = item.label.for) }}
+            {{ input (type = item.input.type, value = item.input.value, id = item.input.id) }}
+          </div>
+        {% endfor %}
+
+      </form>
+
+    {% endif %}
+
+  </div>
+
+  <footer class="modal-footer{{ ' is-aligned-' + modal.footer.align if modal.footer.align}}">
+
+    {% for button in modal.footer.buttons %}
+      {{ button_link (text = button.text, href = button.href, state = button.state) }}
+    {% endfor %}
+
+  </footer>
+</section>
+{% endmacro %}

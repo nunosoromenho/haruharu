@@ -1,0 +1,20 @@
+
+.o-modal-form {
+
+  p + * {
+    margin-top: 24px;
+  }
+
+  .a-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: $ash;
+    line-height: 1.67;
+  }
+
+  .a-input {
+    height: 54px;
+    border: solid 1px $smoke;
+  }
+}

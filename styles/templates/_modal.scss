@@ -1,0 +1,122 @@
+/**
+ * @template modal
+ * @section haruharu/styles/templates/_modal.scss
+ *
+ * @modifiers
+ *  .is-open
+ *
+ * @markup
+ *  <section role="dialog" class="t-modal is-open">
+ *    <header class="modal-header"></header>
+ *    <div class="modal-body"></div>
+ *    <footer class="modal-footer"></footer>
+ *  </section>
+ *
+ * @index
+ *  Modal
+**/
+
+$modal-content-width: 465px;
+$modal-background: $white;
+$modal-header-background: $bone;
+$modal-footer-button-space: 16px;
+
+.t-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  height: 0;
+  background-color: rgba(0,0,0,0.7);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: -1;
+
+  &.is-open {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  width: $modal-content-width;
+  background-color: $modal-header-background;
+
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: $midnight;
+    line-height: 1.5;
+  }
+
+  .close-modal {
+    width: 44px;
+    height: 44px;
+    margin: -16px;
+    padding: 0;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M26,8,24,6l-8,8L8,6,6,8l8,8L6,24l2,2,8-8,8,8,2-2-8-8Z' transform='translate(-6 -6)'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 14px;
+    border: none;
+    text-indent: -99999px;
+  }
+}
+
+.modal-body {
+  width: $modal-content-width;
+  padding: 16px;
+  background-color: $modal-background;
+
+  p {
+    font-size: 14px;
+    color: $midnight;
+    line-height: 1.57;
+  }
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  width: $modal-content-width;
+  padding: 16px;
+  background-color: $modal-background;
+
+  &.is-aligned-right {
+    justify-content: flex-end;
+
+    .a-button {
+      margin-left: $modal-footer-button-space;
+    }
+  }
+
+  &.is-aligned-left {
+    justify-content: flex-start;
+
+    .a-button {
+      margin-right: $modal-footer-button-space;
+    }
+  }
+
+  &.is-aligned-center {
+    justify-content: center;
+
+    .a-button {
+      margin-right: $modal-footer-button-space / 2;
+      margin-left: $modal-footer-button-space / 2;
+    }
+  }
+}

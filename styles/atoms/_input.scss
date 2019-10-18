@@ -20,6 +20,7 @@
 input.a-input {
   width: 100%;
   height: 36px;
+  border: 1px solid $smoke;
   color: $charcoal;
   line-height: 1;
 
@@ -28,14 +29,14 @@ input.a-input {
   // Input States
 
   :hover {
-
+    border-color: $midnight;
   }
 
   :active {
-
+    border-color: $midnight;
   }
 
   :focus {
-
+    border-color: $midnight;
   }
 }

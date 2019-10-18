@@ -1,0 +1,151 @@
+/**
+ * Helpers
+ */
+/**
+ * Templates
+ */
+/**
+ * @template modal
+ * @section haruharu/styles/templates/_modal.scss
+ *
+ * @modifiers
+ *  .is-open
+ *
+ * @markup
+ *  <section role="dialog" class="t-modal is-open">
+ *    <header class="modal-header"></header>
+ *    <div class="modal-body"></div>
+ *    <footer class="modal-footer"></footer>
+ *  </section>
+ *
+ * @index
+ *  Modal
+**/
+.t-modal {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: -1;
+}
+
+.t-modal.is-open {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  opacity: 1;
+  z-index: 2;
+}
+
+.modal-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 16px;
+  width: 465px;
+  background-color: #efeff1;
+}
+
+.modal-header h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #35363E;
+  line-height: 1.5;
+}
+
+.modal-header .close-modal {
+  width: 44px;
+  height: 44px;
+  margin: -16px;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M26,8,24,6l-8,8L8,6,6,8l8,8L6,24l2,2,8-8,8,8,2-2-8-8Z' transform='translate(-6 -6)'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  border: none;
+  text-indent: -99999px;
+}
+
+.modal-body {
+  width: 465px;
+  padding: 16px;
+  background-color: #FFFFFF;
+}
+
+.modal-body p {
+  font-size: 14px;
+  color: #35363E;
+  line-height: 1.57;
+}
+
+.modal-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 465px;
+  padding: 16px;
+  background-color: #FFFFFF;
+}
+
+.modal-footer.is-aligned-right {
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+.modal-footer.is-aligned-right .a-button {
+  margin-left: 16px;
+}
+
+.modal-footer.is-aligned-left {
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+
+.modal-footer.is-aligned-left .a-button {
+  margin-right: 16px;
+}
+
+.modal-footer.is-aligned-center {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.modal-footer.is-aligned-center .a-button {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.o-modal-form p + * {
+  margin-top: 24px;
+}
+
+.o-modal-form .a-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #74757d;
+  line-height: 1.67;
+}
+
+.o-modal-form .a-input {
+  height: 54px;
+  border: solid 1px #bbbcc4;
+}

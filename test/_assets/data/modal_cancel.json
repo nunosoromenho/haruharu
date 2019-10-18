@@ -1,0 +1,38 @@
+{
+  "title": "Cancelar RAT",
+  "id": "rat-cancel",
+  "open": true,
+  "close": true,
+  "form": {
+    "show": true,
+    "text": "Esta operação vai cancelar o seguinte RAT:<br><br>RAT_RT0001.1 - RT | ex-Cliente | Gestão de contactos, informações e pedidos | PARTICULARES<br><br>Pretende confirmar o cancelamento?",
+    "items": [
+      {
+        "label": {
+          "for": "motive_for_alteration",
+          "text": "Motivo da alteração*"
+        },
+        "input": {
+          "type": "text",
+          "value": "",
+          "id": "motive_for_alteration"
+        }
+      }
+    ]
+  },
+  "footer": {
+    "align": "right",
+    "buttons": [
+      {
+        "text": "Cancelar",
+        "href": "#",
+        "state": ["secondary", "medium"]
+      },
+      {
+        "text": "Confirmar",
+        "href": "#",
+        "state": ["primary", "medium"]
+      }
+    ]
+  }
+}
