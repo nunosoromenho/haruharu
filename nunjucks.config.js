@@ -12,9 +12,9 @@ const pagesDir = path.join(__dirname, 'test/_patterns/pages/');
 const distDir = path.join(__dirname, '_site/');
 const dataDir = path.join(__dirname, 'test/_assets/data/');
 
-let data = {};
+const data = {};
 
-data['project'] = config;
+data.project = config;
 
 fs.readdirSync(dataDir).forEach(file => {
   data[file.replace(/\.json$/, '')] = require(dataDir + file);
@@ -28,7 +28,8 @@ fs.readdirSync(pagesDir).forEach(file => {
   const codeHTML = env.render(pagesDir + file, data);
   const fileHTML = file.slice(0, -3) + 'html';
   const finalHTML = pretty(codeHTML, { ocd: true });
-  fs.writeFile(distDir + fileHTML, finalHTML, err => {
-    if (err) console.error('\x1b[31m%s\x1b[0m', err);
-  });
+  console.log(data);
+  // fs.writeFile(distDir + fileHTML, finalHTML, err => {
+  //   if (err) console.error('\x1b[31m%s\x1b[0m', err);
+  // });
 });
