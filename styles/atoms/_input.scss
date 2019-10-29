@@ -28,15 +28,15 @@ input.a-input {
 
   // Input States
 
-  :hover {
+  &:hover {
     border-color: $midnight;
   }
 
-  :active {
+  &:active {
     border-color: $midnight;
   }
 
-  :focus {
+  &:focus {
     border-color: $midnight;
   }
 }
