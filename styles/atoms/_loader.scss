@@ -1,17 +1,36 @@
-.a-loader {
-  width: 40px;
-  height: 40px;
-  margin: 40px auto;
-  background-image: url('../_site/assets/images/parallax-element-2.png');
-  background-size: cover;
-  animation: rotation 1s infinite linear;
-}
+/**
+ * @atom Loader
+ * @section haruharu/styles/atoms/_loader.scss
+ *
+ * @modifiers
+ *  .is-active
+ *
+ * @markup
+ *  <div class="a-loader is-active"></div>
+**/
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
+.a-loader {
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba($charcoal, .7);
+  background-image: url('https://cdn.nos.pt/common/img/loader.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100px;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  &.is-active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
   }
 }

@@ -28,8 +28,7 @@ fs.readdirSync(pagesDir).forEach(file => {
   const codeHTML = env.render(pagesDir + file, data);
   const fileHTML = file.slice(0, -3) + 'html';
   const finalHTML = pretty(codeHTML, { ocd: true });
-  console.log(data);
-  // fs.writeFile(distDir + fileHTML, finalHTML, err => {
-  //   if (err) console.error('\x1b[31m%s\x1b[0m', err);
-  // });
+  fs.writeFile(distDir + fileHTML, finalHTML, err => {
+    if (err) console.error('\x1b[31m%s\x1b[0m', err);
+  });
 });
