@@ -804,9 +804,11 @@ input.a-input:focus {
   opacity: 0.8;
 }
 
-.o-banner-gallery-wrapper:hover .tns-nav .tns-nav-active span {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+@media (min-width: 768px) {
+  .o-banner-gallery-wrapper:hover .tns-nav .tns-nav-active span {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
 }
 
 .tns-controls {

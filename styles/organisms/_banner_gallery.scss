@@ -287,8 +287,10 @@
       opacity: 0.8;
     }
 
-    .tns-nav .tns-nav-active span {
-      animation-play-state: paused;
+    @media (min-width: 768px) {
+      .tns-nav .tns-nav-active span {
+        animation-play-state: paused;
+      }
     }
   }
 }
