@@ -854,9 +854,21 @@ input.a-input:focus {
   left: 0;
 }
 
+@media (min-width: 1681px) {
+  .tns-controls .prev {
+    left: calc((100vw - 1360px) / 2 - 80px);
+  }
+}
+
 .tns-controls .next {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='84'%3E%3Cpath d='M7.822 63.925l-2.828-2.828 19.203-19.203L4.888 22.586l2.828-2.828 22.136 22.136-22.03 22.03zm-44.897-4.107L-55 41.893l21.136-21.136 2.828 2.828-18.308 18.308L-34.247 57l-2.828 2.828z' fill='%23efeff1' fill-rule='nonzero'/%3E%3C/svg%3E");
   right: 0;
+}
+
+@media (min-width: 1681px) {
+  .tns-controls .next {
+    right: calc((100vw - 1360px) / 2 - 80px);
+  }
 }
 
 .tns-nav {
