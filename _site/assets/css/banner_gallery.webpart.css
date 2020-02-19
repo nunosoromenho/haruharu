@@ -328,16 +328,34 @@
   }
 }
 
-.m-slide-info > .a-button {
+.m-slide-info > .m-slide-actions {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 16px;
 }
 
+.m-slide-info > .m-slide-actions > .a-button {
+  margin: 0 16px 8px 0;
+}
+
+.m-slide-info > .m-slide-actions > .a-button:last-child {
+  margin: 0;
+}
+
 @media (max-width: 768px) {
-  .m-slide-info > .a-button {
+  .m-slide-info > .m-slide-actions > .a-button.-primary {
     background-color: #FFFFFF;
     border-color: #FFFFFF;
     font-weight: 500;
     color: #1e1f27;
+  }
+  .m-slide-info > .m-slide-actions > .a-button.-secondary {
+    background-color: transparent;
+    border-color: #FFFFFF;
+    font-weight: 500;
+    color: #FFFFFF;
   }
 }
 

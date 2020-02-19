@@ -8,9 +8,14 @@
     "position": "left",
     "align": "left",
     "button": {
-      "text": "Saber mais",
+      "text": "Ver todos os smartphones",
       "srcset": "https://www.nos.pt/particulares/televisao/canais/exclusivos/Pages/nos-studios.aspx?hp",
       "state": ["primary", "dark", "medium"]
+    },
+    "button2": {
+      "text": "Ver todos os acessórios",
+      "srcset": "https://www.nos.pt/particulares/televisao/canais/exclusivos/Pages/nos-studios.aspx?hp",
+      "state": ["secondary", "dark", "medium"]
     },
     "background": "yellow",
     "titlecolor": "pink",

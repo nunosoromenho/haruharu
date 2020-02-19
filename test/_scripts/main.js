@@ -67,5 +67,12 @@ forEach(banners, function (index, value) {
       slider.pause();
       slider.goTo('next');
     });
+  } else {
+    var buttons = banners[index].querySelectorAll('.tns-nav button');
+    buttons.forEach(function () {
+      this.addEventListener('click', function () {
+        slider.play();
+      });
+    });
   }
 });

@@ -261,16 +261,36 @@
     }
   }
 
-  > .a-button {
+  > .m-slide-actions {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 16px;
 
-    @media (max-width: 768px) {
-      background-color: $white;
-      border-color: $white;
-      font-weight: 500;
-      color: $charcoal;
+    > .a-button {
+      margin: 0 16px 8px 0;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      @media (max-width: 768px) {
+        &.-primary {
+          background-color: $white;
+          border-color: $white;
+          font-weight: 500;
+          color: $charcoal;
+        }
+
+        &.-secondary {
+          background-color: transparent;
+          border-color: $white;
+          font-weight: 500;
+          color: $white;
+        }
+      }
     }
   }
+
 }
 
 // TinySlider

@@ -50,9 +50,14 @@
               </p>
             {% endif %}
 
-            {% if slide.button %}
-              {{ button_link (arrow = 'right', text = slide.button.text, href = slide.button.url, state = slide.button.state) }}
-            {% endif %}
+            <div class="m-slide-actions">
+              {% if slide.button %}
+                {{ button_link (arrow = 'right', text = slide.button.text, href = slide.button.url, state = slide.button.state) }}
+              {% endif %}
+              {% if slide.button2 %}
+                {{ button_link (arrow = 'right', text = slide.button2.text, href = slide.button2.url, state = slide.button2.state) }}
+              {% endif %}
+            </div>
           </div>
 
           {{ picture (sources = slide.image.sources, src = slide.image.default, srcNS = slide.image.noscript, alt = slide.image.alt) }}
