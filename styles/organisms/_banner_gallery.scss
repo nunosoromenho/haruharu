@@ -214,7 +214,7 @@
     }
   }
 
-  .a-image {
+  img {
     max-width: 100px;
     max-height: 80px;
     margin-bottom: 8px;
@@ -222,7 +222,7 @@
 
   > h2,
   > h3,
-  > .a-text {
+  > p {
     align-self: stretch;
   }
 
@@ -249,7 +249,7 @@
     }
   }
 
-  > .a-text {
+  > p {
     font-size: 22px;
     line-height: 1.2;
 

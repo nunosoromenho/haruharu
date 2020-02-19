@@ -728,7 +728,7 @@ input.a-input:focus {
   }
 }
 
-.m-slide-info .a-image {
+.m-slide-info img {
   max-width: 100px;
   max-height: 80px;
   margin-bottom: 8px;
@@ -736,7 +736,7 @@ input.a-input:focus {
 
 .m-slide-info > h2,
 .m-slide-info > h3,
-.m-slide-info > .a-text {
+.m-slide-info > p {
   -ms-flex-item-align: stretch;
       align-self: stretch;
 }
@@ -765,13 +765,13 @@ input.a-input:focus {
   }
 }
 
-.m-slide-info > .a-text {
+.m-slide-info > p {
   font-size: 22px;
   line-height: 1.2;
 }
 
 @media (max-width: 768px) {
-  .m-slide-info > .a-text {
+  .m-slide-info > p {
     font-size: 16px;
     font-weight: 300;
     color: #FFFFFF !important;
